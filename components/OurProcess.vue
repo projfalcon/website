@@ -1,5 +1,7 @@
 <template>
   <div id="process">
+    <img id="triangle-illustration" src="~assets/media/misc/triangle.svg">
+
     <div class="container">
       <div id="develop">
         <img src="~assets/media/illustrations/process/development.svg">
@@ -79,6 +81,15 @@ export default {
 
 <style lang="scss" scoped>
 #process {
+  position: relative;
+  margin: 11.25rem auto 10rem auto;
+
+  img#triangle-illustration {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2.5rem;
+  }
+
   .container {
     max-width: 77%;
     display: grid;
@@ -113,7 +124,7 @@ export default {
 
   #design {
     img {
-      margin-left: 2rem;
+      transform: translateX(12.5%);
     }
   }
 }

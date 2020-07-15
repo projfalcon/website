@@ -1,5 +1,7 @@
 <template>
   <div id="latest-solution">
+    <img id="square" src="~assets/media/misc/square.svg">
+
     <div class="content">
       <div class="project-image">
         <img src="~assets/media/projects/gruporeis.svg">
@@ -38,11 +40,18 @@ export default {
 
 <style lang="scss" scoped>
 #latest-solution {
+  position: relative;
   min-height: 22.5rem;
   width: 100%;
   background-color: #E8F8FF;
   padding: 2.125rem 0;
   margin: 12.5rem 0 5rem 0;
+
+  img#square {
+    position: absolute;
+    top: calc(100% - 4rem);
+    right: 6rem;
+  }
 
   .content {
     max-width: 77%;

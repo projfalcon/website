@@ -92,8 +92,9 @@ export default {
       grid-column: 6 / 13;
 
       img {
+        display: block;
         width: 100%;
-        max-width: 50rem;
+        max-width: 60rem;
         object-fit: cover;
         margin: 0 auto;
       }

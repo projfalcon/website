@@ -1,15 +1,19 @@
 <template>
   <div class="container">
     <Header />
+    <LatestProject />
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
 
+import LatestProject from '@/components/LatestProject'
+
 export default {
   components: {
-    Header
+    Header,
+    LatestProject
   }
 }
 </script>

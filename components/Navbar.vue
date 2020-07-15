@@ -1,9 +1,9 @@
 <template>
-  <nav>
+  <nav :class="{ active: Active }">
     <div class="nav-content">
-      <div class="logo">
-        <img src="~assets/logo/logo-long.svg" alt="Project Falcon">
-      </div>
+      <nuxt-link to="/" tag="div" class="logo">
+        <img src="~assets/logo/long.svg" alt="Project Falcon">
+      </nuxt-link>
 
       <div class="links">
         <nuxt-link id="home-link" to="/" tag="a" class="link">
@@ -32,6 +32,11 @@
 
 <script>
 export default {
+  data () {
+    return {
+      Active: false
+    }
+  },
   beforeMount () {
     window.addEventListener('scroll', this.watchScroll)
   },
@@ -51,7 +56,14 @@ export default {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 50;
     width: 100%;
+    transition: ease all 0.3s;
+
+    &.active {
+      background-color: #fff;
+      box-shadow: 0 0 0 0.125rem $primary;
+    }
 
     .nav-content {
       max-width: 77%;

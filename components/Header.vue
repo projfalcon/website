@@ -43,14 +43,15 @@ export default {
 
   &__lines {
     position: absolute;
-    top: 5rem;
+    // bottom: 25%;
+    // width: 30rem;
     height: 15rem;
   }
 
   &__ellipse {
     position: absolute;
-    bottom: -5rem;
-    left: 3.5rem;
+    // bottom: -12.5%;
+    // left: 7.5%;
     z-index: 0;
   }
 
@@ -98,6 +99,87 @@ export default {
         object-fit: cover;
         margin: 0 auto;
       }
+    }
+  }
+
+  @media (max-width: 3440px) {
+    &__lines {
+      width: 60rem;
+      bottom: 17.5%;
+    }
+
+    &__ellipse {
+      bottom: -12.5%;
+      left: 9%;
+    }
+  }
+
+  @media (max-width: 2580px) {
+    &__lines {
+      bottom: 30%;
+    }
+
+    &__ellipse {
+      left: 8%;
+    }
+  }
+
+  @media (max-width: 2160px) {
+    &__lines {
+      bottom: 30%;
+    }
+  }
+
+  @media (max-width: 1920px) {
+    &__lines {
+      bottom: 35%;
+    }
+  }
+
+  @media (max-width: 1690px) {
+    &__lines {
+      width: 45rem;
+      bottom: 40%;
+    }
+
+    &__ellipse {
+      bottom: -15%;
+      left: 7.5%;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    &__lines {
+      bottom: 45%;
+    }
+
+    &__ellipse {
+      bottom: -18%;
+      left: 6%;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    &__lines {
+      width: 35rem;
+      bottom: 50%;
+    }
+
+    &__ellipse {
+      bottom: -20%;
+      left: 5.5%;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    &__lines {
+      width: 20rem;
+      bottom: 50%;
+    }
+
+    &__ellipse {
+      bottom: -18%;
+      left: 6%;
     }
   }
 }

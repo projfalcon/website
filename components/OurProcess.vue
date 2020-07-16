@@ -96,43 +96,48 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0 7.5rem;
     margin: 0 auto;
-  }
 
-  > div {
-    img {
-      display: block;
-      margin: 0 auto 2rem auto;
-    }
+    > div {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 12.5rem minmax(0, 2rem) auto minmax(1rem, 1fr) auto;
 
-    h2.title {
-      text-align: center;
-      margin-bottom: 1.25rem;
-    }
+      img {
+        max-height: 12.5rem;
+        display: block;
+        margin: 0 auto 2rem auto;
+      }
 
-    h5.description {
-      color: $grey;
-      text-align: center;
-      margin-bottom: 0.75rem;
-    }
+      h2.title {
+        text-align: center;
+        margin-bottom: 1.25rem;
+      }
 
-    h4.link {
-      max-width: max-content;
-      display: block;
-      text-align: center;
-      color: $primary;
-      margin: 0 auto;
-      transition: 0.3s ease all;
-      cursor: pointer;
+      h5.description {
+        color: $grey;
+        text-align: center;
+        margin-bottom: 0.75rem;
+      }
 
-      &:hover {
-        color: $red;
+      h4.link {
+        max-width: max-content;
+        display: block;
+        text-align: center;
+        color: $primary;
+        margin: 0 auto;
+        transition: 0.3s ease all;
+        cursor: pointer;
+
+        &:hover {
+          color: $red;
+        }
       }
     }
   }
 
   #design {
     img {
-      transform: translateX(12.5%);
+      transform: translateX(12%);
     }
   }
 }

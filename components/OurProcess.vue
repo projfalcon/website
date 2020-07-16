@@ -97,7 +97,7 @@ export default {
   .container {
     max-width: 77%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 0 7.5rem;
     margin: 0 auto;
 

@@ -6,7 +6,9 @@
       <div id="develop">
         <img src="~assets/media/illustrations/process/development.svg">
 
-        <p :v-html="Subtitles.Development" class="subtitle" />
+        <p class="subtitle">
+          &#60;/&#62;
+        </p>
 
         <h2 class="h2 title">
           Development
@@ -24,8 +26,9 @@
 
       <div id="design">
         <img src="~assets/media/illustrations/process/design.svg">
+
         <p class="subtitle">
-          <!-- </> -->
+          • | .
         </p>
 
         <h2 class="h2 title">
@@ -44,8 +47,9 @@
 
       <div id="thinking">
         <img src="~assets/media/illustrations/process/thinking.svg">
+
         <p class="subtitle">
-          <!-- </> -->
+          1 + 2 = 3
         </p>
 
         <h2 class="h2 title">
@@ -100,12 +104,18 @@ export default {
     > div {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 12.5rem minmax(0, 2rem) auto minmax(1rem, 1fr) auto;
+      grid-template-rows: 12.5rem auto auto minmax(1rem, 1fr) auto;
 
       img {
         max-height: 12.5rem;
         display: block;
-        margin: 0 auto 2rem auto;
+        margin: 0 auto;
+      }
+
+      p.subtitle {
+        color: $primary;
+        text-align: center;
+        margin-top: 2rem;
       }
 
       h2.title {

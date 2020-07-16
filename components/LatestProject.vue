@@ -45,7 +45,7 @@ export default {
   width: 100%;
   background-color: #E8F8FF;
   padding: 2.125rem 0;
-  margin: 12.5rem 0 5rem 0;
+  margin: 12.5rem 0 6rem 0;
 
   img#square {
     position: absolute;

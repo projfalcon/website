@@ -86,7 +86,7 @@ export default {
 <style lang="scss" scoped>
 #process {
   position: relative;
-  margin: 11.25rem auto 10rem auto;
+  margin: 11.25rem auto 10.625rem auto;
 
   img#triangle-illustration {
     position: absolute;

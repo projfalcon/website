@@ -187,3 +187,49 @@ button {
   font-size: 0.75rem;
   line-height: 1.125rem;
 }
+
+.highlighted {
+  color: $primary;
+}
+
+a.highlighted {
+  text-decoration: none;
+
+  &:active,
+  &:focus,
+  &:visited,
+  &:hover {
+    color: $primary;
+  }
+}
+
+// INPUTS
+textarea {
+  font-family: "Hind";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid $primary;
+  border-radius: 0.25rem;
+  outline: none;
+  resize: none;
+
+  &::placeholder {
+    color: $primary;
+  }
+}
+
+input {
+  font-family: "Hind";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: $primary;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid $primary;
+  border-radius: 0.25rem;
+  outline: none;
+
+  &::placeholder {
+    color: $primary;
+  }
+}

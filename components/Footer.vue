@@ -45,6 +45,7 @@ export default {
 <style lang="scss" scoped>
 footer {
   width: 100%;
+  padding: 2rem 0;
 
   .container {
     max-width: 77%;

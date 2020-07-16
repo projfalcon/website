@@ -12,11 +12,11 @@
           LATEST SOLUTION
         </p>
 
-        <h2 id="project-title">
+        <h2 id="project-title" class="h2">
           Pharmacy E-Commerce
         </h2>
 
-        <h5 id="project-long__description">
+        <h5 id="project-long__description" class="h5">
           Whether you need a E-Commerce, a landing page or an app
           we are here for you to help decide what’s best. Whether
           you need a E-Commerce, a landing page or an app we are
@@ -24,7 +24,7 @@
           an app we are here.
         </h5>
 
-        <nuxt-link id="read-more" to="" tag="h4">
+        <nuxt-link id="read-more" to="" tag="h4" class="h4">
           Read More  →
         </nuxt-link>
       </div>

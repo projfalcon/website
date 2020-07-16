@@ -6,15 +6,15 @@
       </nuxt-link>
 
       <div class="legal-links">
-        <h6 class="creative-commons">
+        <h6 class="h6 creative-commons">
           {{ Year }} © Falcon Project. All rights reserved
         </h6>
 
-        <nuxt-link to="#" tag="h6">
+        <nuxt-link to="#" tag="h6" class="h6">
           Terms & Conditions
         </nuxt-link>
 
-        <nuxt-link to="#" tag="h6">
+        <nuxt-link to="#" tag="h6" class="h6">
           Privacy Policy
         </nuxt-link>
       </div>

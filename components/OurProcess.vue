@@ -8,16 +8,16 @@
 
         <p :v-html="Subtitles.Development" class="subtitle" />
 
-        <h2 class="title">
+        <h2 class="h2 title">
           Development
         </h2>
 
-        <h5 class="description">
+        <h5 class="h5 description">
           Golang, Javascript (Node.js, React, Angular, Nuxt) & more.
           We code depending on your needs.
         </h5>
 
-        <nuxt-link to="/" tag="h4" class="link">
+        <nuxt-link to="/" tag="h4" class="h4 link">
           Read More  →
         </nuxt-link>
       </div>
@@ -28,16 +28,16 @@
           <!-- </> -->
         </p>
 
-        <h2 class="title">
+        <h2 class="h2 title">
           Design
         </h2>
 
-        <h5 class="description">
+        <h5 class="h5 description">
           Colaborate with us through Figma and test your solutions
           before commiting.
         </h5>
 
-        <nuxt-link to="/" tag="h4" class="link">
+        <nuxt-link to="/" tag="h4" class="h4 link">
           Read More  →
         </nuxt-link>
       </div>
@@ -48,16 +48,16 @@
           <!-- </> -->
         </p>
 
-        <h2 class="title">
+        <h2 class="h2 title">
           Thinking
         </h2>
 
-        <h5 class="description">
+        <h5 class="h5 description">
           Whether you need a E-Commerce, a landing page or an app we are here
           for you to help decide what’s best.
         </h5>
 
-        <nuxt-link to="/" tag="h4" class="link">
+        <nuxt-link to="/" tag="h4" class="h4 link">
           Read More  →
         </nuxt-link>
       </div>
@@ -116,9 +116,17 @@ export default {
     }
 
     h4.link {
+      max-width: max-content;
       display: block;
       text-align: center;
       color: $primary;
+      margin: 0 auto;
+      transition: 0.3s ease all;
+      cursor: pointer;
+
+      &:hover {
+        color: $red;
+      }
     }
   }
 

@@ -5,11 +5,11 @@
 
     <div class="c-Header__container">
       <div class="c-Header__container-info">
-        <h1>
+        <h1 class="h1">
           High-quality, blazing-fast.
         </h1>
 
-        <h3>
+        <h3 class="h3">
           Our team is ready to tackle the hardest of solutions for your company.
         </h3>
 

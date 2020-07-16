@@ -136,7 +136,7 @@ button {
 }
 
 // HEADERS
-h1 {
+.h1 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: bold;
@@ -144,14 +144,14 @@ h1 {
   line-height: 3.75rem;
 }
 
-h2 {
+.h2 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 1.6125rem;
 }
 
-h3 {
+.h3 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: normal;
@@ -159,28 +159,28 @@ h3 {
   line-height: 2rem;
 }
 
-h4 {
+.h4 {
   font-family: "Hind";
   font-style: normal;
   font-weight: 700;
   font-size: 1rem;
 }
 
-h5 {
+.h5 {
   font-family: "Hind";
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
 }
 
-h6 {
+.h6 {
   font-family: "Hind";
   font-style: normal;
   font-weight: 400;
   font-size: 0.875rem;
 }
 
-p.subtitle {
+.subtitle {
   font-family: "Hind";
   font-style: normal;
   font-weight: 400;

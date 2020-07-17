@@ -66,7 +66,6 @@ export default {
     }
 
     .nav-content {
-      // max-width: 77%;
       display: flex;
       align-items: center;
       padding: 2.25rem 0;
@@ -75,6 +74,7 @@ export default {
       .logo {
         display: flex;
         align-items: center;
+        cursor: pointer;
       }
 
       .links {

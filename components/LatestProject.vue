@@ -2,7 +2,7 @@
   <div id="latest-solution">
     <img id="square" src="~assets/media/misc/square.svg">
 
-    <div class="content">
+    <div class="container">
       <div class="project-image">
         <img src="~assets/media/projects/gruporeis.svg">
       </div>
@@ -51,13 +51,18 @@ export default {
     position: absolute;
     top: calc(100% - 4rem);
     right: 6rem;
+    z-index: 1;
   }
 
-  .content {
+  .container {
     display: grid;
     grid-template-columns: minmax(0, 37.5rem) minmax(0, 1fr);
     grid-gap: 0 7.5rem;
     margin: 0 auto;
+
+    * {
+      z-index: 10;
+    }
 
     .project-image {
       position: relative;
@@ -87,27 +92,102 @@ export default {
       }
 
       h4#read-more {
-        max-width: max-content;
+        max-width: max-container;
         display: block;
         color: $primary;
         cursor: pointer;
       }
     }
+  }
 
-    @media (max-width: 3440px) {
+  @media (max-width: 3440px) {
+    min-height: 37.5rem;
+
+    .container {
       max-width: 60%;
-    }
+      grid-template-columns: minmax(0, 66.625rem) minmax(0, 1fr);
 
-    @media (max-width: 2580px) {
+      .project-image img {
+        height: 37.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 2580px) {
+    min-height: 30rem;
+
+    .container {
       max-width: 65%;
-    }
+      grid-template-columns: minmax(0, 53.3125rem) minmax(0, 1fr);
 
-    @media (max-width: 1920px) {
+      .project-image img {
+        height: 30rem;
+      }
+    }
+  }
+
+  @media (max-width: 1920px) {
+    min-height: 27.5rem;
+
+    .container {
       max-width: 77%;
-    }
+      grid-template-columns: minmax(0, 48.875rem) minmax(0, 1fr);
 
-    @media (max-width: 1280px) {
+      .project-image img {
+        height: 27.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 1690px) {
+    min-height: 22.5rem;
+
+    .container {
+      max-width: 77%;
+      grid-template-columns: minmax(0, 40rem) minmax(0, 1fr);
+
+      .project-image img {
+        height: 22.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    min-height: 20rem;
+
+    .container {
+      max-width: 77%;
+      grid-template-columns: minmax(0, 36.75rem) minmax(0, 1fr);
+
+      .project-image img {
+        height: 20rem;
+      }
+    }
+  }
+
+  @media (max-width: 1280px) {
+    min-height: 20rem;
+
+    .container {
       max-width: 90%;
+      grid-template-columns: minmax(0, 36.75rem) minmax(0, 1fr);
+
+      .project-image img {
+        height: 20rem;
+      }
+    }
+  }
+
+  @media (max-width: 1280px) {
+    min-height: 16rem;
+
+    .container {
+      grid-template-columns: minmax(0, 28.4375rem) minmax(0, 1fr);
+      grid-gap: 0 3rem;
+
+      .project-image img {
+        height: 16rem;
+      }
     }
   }
 }

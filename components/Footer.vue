@@ -65,7 +65,10 @@ footer {
 
       h6 {
         color: $grey;
-        margin-right: 4rem;
+
+        &:not(:last-of-type) {
+          margin-right: 4rem;
+        }
       }
     }
 
@@ -107,6 +110,7 @@ footer {
 
     @media (max-width: 1280px) {
       max-width: 90%;
+      grid-template-columns: 3rem 1fr minmax(4rem, auto);
     }
   }
 }

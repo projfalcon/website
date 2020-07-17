@@ -194,8 +194,8 @@ export default {
     }
 
     &__ellipse {
-      bottom: -18%;
-      left: 6%;
+      bottom: -25%;
+      left: -1%;
     }
   }
 }

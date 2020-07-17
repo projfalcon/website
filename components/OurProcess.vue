@@ -92,6 +92,7 @@ export default {
     position: absolute;
     bottom: 0;
     margin-bottom: 2.5rem;
+    z-index: -1;
   }
 
   .container {
@@ -104,6 +105,10 @@ export default {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 12.5rem auto auto minmax(1rem, 1fr) auto;
+
+      > * {
+        z-index: 10;
+      }
 
       img {
         max-height: 12.5rem;

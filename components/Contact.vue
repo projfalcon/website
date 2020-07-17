@@ -44,14 +44,14 @@ export default {
     position: absolute;
     top: -2rem;
     right: 19rem;
-    z-index: 0;
+    z-index: -1;
   }
 
   #lines {
     position: absolute;
     top: -11.25rem;
     right: 0;
-    z-index: -1;
+    z-index: -2;
     width: 24rem;
   }
 
@@ -68,6 +68,10 @@ export default {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-gap: 1rem;
+
+      > * {
+        z-index: 10;
+      }
 
       textarea {
         grid-column: 1 / 13;

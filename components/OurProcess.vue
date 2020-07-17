@@ -139,25 +139,12 @@ export default {
         text-align: center;
         color: $primary;
         margin: 0 auto;
-        transition: 0.3s ease all;
         cursor: pointer;
-
-        &:hover {
-          color: $red;
-        }
       }
     }
 
-    @media (max-width: 3440px) {
-      max-width: 60%;
-    }
-
-    @media (max-width: 2580px) {
-      max-width: 65%;
-    }
-
-    @media (max-width: 1920px) {
-      max-width: 77%;
+    @media (min-width: 1440px) {
+      max-width: 1100px;
     }
 
     @media (max-width: 1280px) {

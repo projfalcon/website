@@ -1,26 +1,40 @@
-<svg width="333" height="218" viewBox="0 0 333 218" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="-664.989" y="56" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-680.607" y="112" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-805.551" y="168" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-883.64" y="8" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-672.798" y="64" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-655.618" y="120" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-868.022" y="176" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-836.786" y="16" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-682.168" y="72" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-646.247" y="128" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-878.955" y="184" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-789.933" y="24" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-696.225" y="80" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-649.371" y="136" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-899.258" y="192" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-758.697" y="32" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-724.337" y="88" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-654.056" y="144" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-711.843" y="40" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-729.022" y="96" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-664.989" y="152" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-672.798" y="48" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-711.843" y="104" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
-<rect x="-711.843" y="160" width="979.247" height="2" rx="1" fill="#1D1D1D" fill-opacity="0.05"/>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4978.65 218">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f3f3f3;
+      }
+    </style>
+  </defs>
+  <title>Lines</title>
+  <g>
+    <path class="cls-1" d="M2110.37-1050.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1h-4599.7v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2469.58-994.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2454-938.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1h-4943.3v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2329-882.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2250.93-1042.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2461.77-986.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1h-4951.1v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2479-930.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2266.55-874.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2297.79-1034.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2452.4-978.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2488.33-924.93H-2489.33v2H2488.33a1,1,0,0,0,1-1A1,1,0,0,0,2488.33-924.93Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2255.62-866.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2344.64-1026.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1h-4834v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2438.35-970.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2485.2-914.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2235.31-858.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2375.88-1018.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2410.24-962.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2480.52-906.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2110.37-850.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1h-4599.7v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2422.73-1010.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2405.55-954.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2469.58-898.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2032.28-842.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2461.77-1002.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1h-4951.1v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2422.73-946.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M2422.73-890.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1H-2489.33v2Z" transform="translate(2489.33 1052.93)"/>
+    <path class="cls-1" d="M1938.57-834.93a1,1,0,0,0,1-1,1,1,0,0,0-1-1h-4427.9v2Z" transform="translate(2489.33 1052.93)"/>
+  </g>
 </svg>

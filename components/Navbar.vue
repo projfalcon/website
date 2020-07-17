@@ -99,26 +99,30 @@ nav {
         }
 
         &.colored {
+          position: relative;
           font-weight: 700;
           color: $primary;
 
-          &:hover {
-            color: $red;
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0.125rem;
+            background-color: $primary;
+            transition: 0.3s ease all;
+          }
+
+          &:hover::after {
+            width: 100%;
           }
         }
       }
     }
 
-    @media (max-width: 3440px) {
-      max-width: 60%;
-    }
-
-    @media (max-width: 2580px) {
-      max-width: 65%;
-    }
-
-    @media (max-width: 1920px) {
-      max-width: 77%;
+    @media (min-width: 1440px) {
+      max-width: 1100px;
     }
 
     @media (max-width: 1280px) {

@@ -86,12 +86,8 @@ footer {
           margin-right: 2rem;
         }
 
-        &#instagram:hover {
+        &:hover {
           color: $primary;
-        }
-
-        &#facebook:hover {
-          color: $secondary;
         }
       }
     }
@@ -106,6 +102,10 @@ footer {
 
     @media (max-width: 1920px) {
       max-width: 77%;
+    }
+
+    @media (min-width: 1440px) {
+      max-width: 1100px;
     }
 
     @media (max-width: 1280px) {

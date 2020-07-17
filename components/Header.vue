@@ -1,7 +1,6 @@
 <template>
   <header class="c-Header">
     <img class="c-Header__lines" src="~assets/media/misc/lines.svg">
-    <img class="c-Header__ellipse" src="~assets/media/misc/ellipse.svg">
 
     <div class="c-Header__container">
       <div class="c-Header__container-info">
@@ -22,6 +21,8 @@
             What we do
           </nuxt-link>
         </div>
+
+        <img class="c-Header__container-info__ellipse" src="~assets/media/misc/ellipse.svg">
       </div>
 
       <div class="c-Header__container-animation">
@@ -43,16 +44,8 @@ export default {
 
   &__lines {
     position: absolute;
-    // bottom: 25%;
-    // width: 30rem;
+    right: 61%;
     height: 15rem;
-  }
-
-  &__ellipse {
-    position: absolute;
-    // bottom: -12.5%;
-    // left: 7.5%;
-    z-index: 0;
   }
 
   &__container {
@@ -65,6 +58,7 @@ export default {
     margin: 0 auto;
 
     &-info {
+      position: relative;
       grid-column: 1 / 6;
       display: flex;
       flex-direction: column;
@@ -87,6 +81,13 @@ export default {
           margin-right: 1rem;
         }
       }
+
+      &__ellipse {
+        position: absolute;
+        left: -4rem;
+        top: calc(100% - 1.5rem);
+        z-index: -1;
+      }
     }
 
     &-animation {
@@ -96,107 +97,44 @@ export default {
         display: block;
         width: 100%;
         max-width: 60rem;
+        max-height: 26.375rem;
         object-fit: cover;
         margin: 0 auto;
       }
     }
   }
 
-  @media (max-width: 3440px) {
+  @media (max-width: 2560px) {
     &__lines {
-      width: 60rem;
-      bottom: 17.5%;
-    }
-
-    &__ellipse {
-      bottom: -12.5%;
-      left: 9%;
-    }
-
-    &__container {
-      max-width: 60%;
-    }
-  }
-
-  @media (max-width: 2580px) {
-    &__lines {
-      bottom: 30%;
-    }
-
-    &__ellipse {
-      left: 8%;
-    }
-
-    &__container {
-      max-width: 65%;
-    }
-  }
-
-  @media (max-width: 2160px) {
-    &__lines {
-      bottom: 30%;
+      right: 65%;
     }
   }
 
   @media (max-width: 1920px) {
     &__lines {
-      bottom: 35%;
-    }
-
-    &__container {
-      max-width: 77%;
+      right: 70%;
     }
   }
 
   @media (max-width: 1690px) {
     &__lines {
-      width: 45rem;
-      bottom: 40%;
-    }
-
-    &__ellipse {
-      bottom: -15%;
-      left: 7.5%;
+      right: 75%;
     }
   }
 
-  @media (max-width: 1440px) {
-    &__lines {
-      bottom: 45%;
-    }
-
-    &__ellipse {
-      bottom: -18%;
-      left: 6%;
+  @media (min-width: 1440px) {
+    &__container {
+      max-width: 1100px;
     }
   }
 
   @media (max-width: 1280px) {
-    &__lines {
-      width: 35rem;
-      bottom: 50%;
-    }
-
-    &__ellipse {
-      bottom: -20%;
-      left: -1%;
-    }
-
     &__container {
       max-width: 90%;
     }
   }
 
   @media (max-width: 1080px) {
-    &__lines {
-      width: 20rem;
-      bottom: 50%;
-    }
-
-    &__ellipse {
-      bottom: -25%;
-      left: -1%;
-    }
   }
 }
 </style>

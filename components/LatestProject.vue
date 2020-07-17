@@ -24,7 +24,7 @@
           an app we are here.
         </h5>
 
-        <nuxt-link id="read-more" to="" tag="h4" class="h4">
+        <nuxt-link id="read-more" to="" tag="h4" class="h4 link">
           Read More  →
         </nuxt-link>
       </div>
@@ -100,54 +100,14 @@ export default {
     }
   }
 
-  @media (max-width: 3440px) {
-    min-height: 37.5rem;
-
+  @media (min-width: 1440px) {
     .container {
-      max-width: 60%;
-      grid-template-columns: minmax(0, 66.625rem) minmax(0, 1fr);
+      max-width: 1100px;
+      grid-template-columns: 60% 40%;
 
       .project-image img {
-        height: 37.5rem;
-      }
-    }
-  }
-
-  @media (max-width: 2580px) {
-    min-height: 30rem;
-
-    .container {
-      max-width: 65%;
-      grid-template-columns: minmax(0, 53.3125rem) minmax(0, 1fr);
-
-      .project-image img {
-        height: 30rem;
-      }
-    }
-  }
-
-  @media (max-width: 1920px) {
-    min-height: 27.5rem;
-
-    .container {
-      max-width: 77%;
-      grid-template-columns: minmax(0, 48.875rem) minmax(0, 1fr);
-
-      .project-image img {
-        height: 27.5rem;
-      }
-    }
-  }
-
-  @media (max-width: 1690px) {
-    min-height: 22.5rem;
-
-    .container {
-      max-width: 77%;
-      grid-template-columns: minmax(0, 40rem) minmax(0, 1fr);
-
-      .project-image img {
-        height: 22.5rem;
+        width: 100%;
+        object-fit: contain;
       }
     }
   }

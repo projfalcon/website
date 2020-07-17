@@ -61,11 +61,10 @@ button {
       background-color: transparent;
       color: $primary;
       border: 1px solid $primary;
+      transition: 0.3s ease all;
 
       &:hover {
-        background-color: $primary;
-        color: #fff;
-        border: 1px solid $primary;
+        box-shadow: 0 0 0 1px $primary inset;
       }
     }
 
@@ -186,6 +185,14 @@ button {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.125rem;
+}
+
+.link {
+  transition: 0.3s ease all;
+
+  &:hover {
+    transform: translateX(10px);
+  }
 }
 
 .highlighted {

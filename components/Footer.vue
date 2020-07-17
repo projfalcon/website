@@ -48,7 +48,6 @@ footer {
   padding: 2rem 0;
 
   .container {
-    max-width: 77%;
     display: grid;
     grid-template-columns: 0.5fr 2fr 0.5fr;
     grid-template-areas: "logo legal-links social";
@@ -92,6 +91,22 @@ footer {
           color: $secondary;
         }
       }
+    }
+
+    @media (max-width: 3440px) {
+      max-width: 60%;
+    }
+
+    @media (max-width: 2580px) {
+      max-width: 65%;
+    }
+
+    @media (max-width: 1920px) {
+      max-width: 77%;
+    }
+
+    @media (max-width: 1280px) {
+      max-width: 90%;
     }
   }
 }

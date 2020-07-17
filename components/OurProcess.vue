@@ -95,7 +95,6 @@ export default {
   }
 
   .container {
-    max-width: 77%;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 0 7.5rem;
@@ -142,6 +141,22 @@ export default {
           color: $red;
         }
       }
+    }
+
+    @media (max-width: 3440px) {
+      max-width: 60%;
+    }
+
+    @media (max-width: 2580px) {
+      max-width: 65%;
+    }
+
+    @media (max-width: 1920px) {
+      max-width: 77%;
+    }
+
+    @media (max-width: 1280px) {
+      max-width: 90%;
     }
   }
 

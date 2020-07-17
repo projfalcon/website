@@ -112,6 +112,10 @@ export default {
       bottom: -12.5%;
       left: 9%;
     }
+
+    &__container {
+      max-width: 60%;
+    }
   }
 
   @media (max-width: 2580px) {
@@ -121,6 +125,10 @@ export default {
 
     &__ellipse {
       left: 8%;
+    }
+
+    &__container {
+      max-width: 65%;
     }
   }
 
@@ -133,6 +141,10 @@ export default {
   @media (max-width: 1920px) {
     &__lines {
       bottom: 35%;
+    }
+
+    &__container {
+      max-width: 77%;
     }
   }
 
@@ -167,7 +179,11 @@ export default {
 
     &__ellipse {
       bottom: -20%;
-      left: 5.5%;
+      left: -1%;
+    }
+
+    &__container {
+      max-width: 90%;
     }
   }
 

@@ -66,7 +66,7 @@ export default {
     }
 
     .nav-content {
-      max-width: 77%;
+      // max-width: 77%;
       display: flex;
       align-items: center;
       padding: 2.25rem 0;
@@ -107,6 +107,22 @@ export default {
             }
           }
         }
+      }
+
+      @media (max-width: 3440px) {
+        max-width: 60%;
+      }
+
+      @media (max-width: 2580px) {
+        max-width: 65%;
+      }
+
+      @media (max-width: 1920px) {
+        max-width: 77%;
+      }
+
+      @media (max-width: 1280px) {
+        max-width: 90%;
       }
     }
   }

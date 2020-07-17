@@ -52,78 +52,78 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 50;
-    width: 100%;
-    transition: ease all 0.3s;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  transition: ease all 0.3s;
 
-    &.active {
-      background-color: #fff;
-      box-shadow: 0 0 0 0.125rem $primary;
-    }
+  &.active {
+    background-color: #fff;
+    box-shadow: 0 0 0 0.125rem $primary;
+  }
 
-    .nav-content {
+  .nav-content {
+    display: flex;
+    align-items: center;
+    padding: 2.25rem 0;
+    margin: 0 auto;
+
+    .logo {
       display: flex;
       align-items: center;
-      padding: 2.25rem 0;
-      margin: 0 auto;
+      cursor: pointer;
+    }
 
-      .logo {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-      }
+    .links {
+      display: flex;
+      margin-left: auto;
 
-      .links {
-        display: flex;
-        margin-left: auto;
+      a {
+        display: block;
+        font-family: "Hind";
+        text-decoration: none;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $text-primary;
+        transition: ease color 0.3s;
 
-        a {
-          display: block;
-          font-family: "Hind";
-          text-decoration: none;
-          font-size: 1rem;
-          line-height: 1.5rem;
-          color: $text-primary;
-          transition: ease color 0.3s;
+        &:not(:last-of-type) {
+          margin-right: 3rem;
+        }
 
-          &:not(:last-of-type) {
-            margin-right: 3rem;
-          }
+        &:hover {
+          color: $primary;
+        }
+
+        &.colored {
+          font-weight: 700;
+          color: $primary;
 
           &:hover {
-            color: $primary;
-          }
-
-          &.colored {
-            font-weight: 700;
-            color: $primary;
-
-            &:hover {
-              color: $red;
-            }
+            color: $red;
           }
         }
       }
+    }
 
-      @media (max-width: 3440px) {
-        max-width: 60%;
-      }
+    @media (max-width: 3440px) {
+      max-width: 60%;
+    }
 
-      @media (max-width: 2580px) {
-        max-width: 65%;
-      }
+    @media (max-width: 2580px) {
+      max-width: 65%;
+    }
 
-      @media (max-width: 1920px) {
-        max-width: 77%;
-      }
+    @media (max-width: 1920px) {
+      max-width: 77%;
+    }
 
-      @media (max-width: 1280px) {
-        max-width: 90%;
-      }
+    @media (max-width: 1280px) {
+      max-width: 90%;
     }
   }
+}
 </style>

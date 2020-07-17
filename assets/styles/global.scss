@@ -52,8 +52,8 @@ button {
       border: 1px solid $primary;
 
       &:hover {
-        background-color: $secondary;
-        border: 1px solid $secondary;
+        background-color: darken($primary, 10);
+        border: 1px solid $primary;
       }
     }
 
@@ -72,7 +72,8 @@ button {
       background-color: $secondary;
 
       &:hover {
-        background-color: $tertiary;
+        background-color: darken($secondary, 10);
+        border: 1px solid $secondary;
       }
     }
 
@@ -80,11 +81,10 @@ button {
       background-color: transparent;
       color: $secondary;
       border: 1px solid $secondary;
+      transition: 0.3s ease all;
 
       &:hover {
-        background-color: $secondary;
-        color: #fff;
-        border: 1px solid $secondary;
+        box-shadow: 0 0 0 1px $secondary inset;
       }
     }
 
@@ -92,7 +92,8 @@ button {
       background-color: $tertiary;
 
       &:hover {
-        background-color: $secondary;
+        background-color: darken($tertiary, 10);
+        border: 1px solid $tertiary;
       }
     }
 
@@ -100,11 +101,10 @@ button {
       background-color: transparent;
       color: $tertiary;
       border: 1px solid $tertiary;
+      transition: 0.3s ease all;
 
       &:hover {
-        background-color: $tertiary;
-        color: #fff;
-        border: 1px solid $tertiary;
+        box-shadow: 0 0 0 1px $tertiary inset;
       }
     }
 

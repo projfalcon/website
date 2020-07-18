@@ -6,23 +6,23 @@
       </nuxt-link>
 
       <div class="links">
-        <nuxt-link id="home-link" to="/" tag="a" class="link">
+        <nuxt-link id="home-link" to="/" tag="a">
           Home
         </nuxt-link>
 
-        <nuxt-link id="about-link" to="about" tag="a" class="link">
+        <nuxt-link id="about-link" to="about" tag="a">
           About
         </nuxt-link>
 
-        <nuxt-link id="team-link" to="team" tag="a" class="link">
+        <nuxt-link id="team-link" to="team" tag="a">
           Team
         </nuxt-link>
 
-        <nuxt-link id="work-link" to="work" tag="a" class="link">
+        <nuxt-link id="work-link" to="work" tag="a">
           Work
         </nuxt-link>
 
-        <nuxt-link to="#" tag="a" class="link colored">
+        <nuxt-link to="#" tag="a" class="colored">
           Get in touch
         </nuxt-link>
       </div>

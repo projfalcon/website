@@ -107,7 +107,6 @@ export default {
 
       .project-image img {
         width: 100%;
-        object-fit: contain;
       }
     }
   }

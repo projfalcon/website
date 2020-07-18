@@ -1,7 +1,5 @@
 <template>
   <div id="latest-solution">
-    <img id="square" src="~assets/media/misc/square.svg">
-
     <div class="container">
       <div class="project-image">
         <img src="~assets/media/projects/gruporeis.svg">
@@ -28,6 +26,8 @@
           Read More  →
         </nuxt-link>
       </div>
+
+      <img id="square" src="~assets/media/misc/square.svg">
     </div>
   </div>
 </template>
@@ -40,21 +40,14 @@ export default {
 
 <style lang="scss" scoped>
 #latest-solution {
-  position: relative;
   min-height: 22.5rem;
   width: 100%;
   background-color: #E8F8FF;
   padding: 2.125rem 0;
   margin: 12.5rem 0 6rem 0;
 
-  img#square {
-    position: absolute;
-    top: calc(100% - 4rem);
-    right: 6rem;
-    z-index: 1;
-  }
-
   .container {
+    position: relative;
     display: grid;
     grid-template-columns: minmax(0, 37.5rem) minmax(0, 1fr);
     grid-gap: 0 7.5rem;
@@ -97,6 +90,13 @@ export default {
         color: $primary;
         cursor: pointer;
       }
+    }
+
+    img#square {
+      position: absolute;
+      top: 100%;
+      left: calc(100% + 3.5rem);
+      z-index: 1;
     }
   }
 

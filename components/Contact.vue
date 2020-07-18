@@ -9,7 +9,7 @@
       </h2>
 
       <div id="form">
-        <textarea v-model="Message" placeholder="Your message goes here..." maxlength="512" />
+        <textarea v-model="Message" rows="4" placeholder="Your message goes here..." maxlength="512" />
         <input v-model="Email" placeholder="Enter your email" type="text">
 
         <button class="btn btn-primary btn-rounded">
@@ -83,6 +83,7 @@ export default {
 
       button {
         grid-column: 9 / 13;
+        font-weight: 700;
       }
     }
 

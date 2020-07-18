@@ -32,38 +32,13 @@
 
 <script>
 export default {
-  data () {
-    return {
-      Active: false
-    }
-  },
-  beforeMount () {
-    window.addEventListener('scroll', this.watchScroll)
-  },
-  methods: {
-    watchScroll (event) {
-      const scroll = window.scrollY
-
-      if (scroll > 0) this.Active = true
-      else this.Active = false
-    }
-  }
 }
 </script>
 
 <style lang="scss" scoped>
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 50;
   width: 100%;
   transition: ease all 0.3s;
-
-  &.active {
-    background-color: #fff;
-    box-shadow: 0 0 0 0.125rem $primary;
-  }
 
   .nav-content {
     display: flex;
@@ -75,6 +50,10 @@ nav {
       display: flex;
       align-items: center;
       cursor: pointer;
+
+      img {
+        max-height: 2rem;
+      }
     }
 
     .links {

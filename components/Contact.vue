@@ -38,21 +38,23 @@ export default {
 <style lang="scss" scoped>
 #contact-us {
   position: relative;
+  padding-top: 10.625rem;
   margin-bottom: 10.625rem;
+  overflow: hidden;
 
   #ellipse {
     position: absolute;
-    top: -2rem;
-    right: 19rem;
+    top: 8.5rem;
+    left: calc(75% - 1.5rem);
     z-index: -1;
   }
 
   #lines {
     position: absolute;
-    top: -11.25rem;
-    right: 0;
+    top: 2.5rem;
+    left: 75%;
+    height: 15rem;
     z-index: -2;
-    width: 24rem;
   }
 
   .container {

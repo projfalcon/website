@@ -26,9 +26,9 @@
           Read More  →
         </nuxt-link>
       </div>
-
-      <img id="square" src="~assets/media/misc/square.svg">
     </div>
+
+    <img id="square" src="~assets/media/misc/square.svg">
   </div>
 </template>
 
@@ -40,6 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 #latest-solution {
+  position: relative;
   min-height: 22.5rem;
   width: 100%;
   background-color: #E8F8FF;
@@ -91,13 +92,14 @@ export default {
         cursor: pointer;
       }
     }
+  }
 
-    img#square {
-      position: absolute;
-      top: 100%;
-      left: calc(100% + 3.5rem);
-      z-index: 1;
-    }
+  img#square {
+    position: absolute;
+    top: calc(100% - 4rem);
+    // right: -12.5rem;
+    right: 17.5rem;
+    z-index: 1;
   }
 
   @media (min-width: 1440px) {

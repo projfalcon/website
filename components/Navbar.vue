@@ -1,5 +1,5 @@
 <template>
-  <nav :class="{ active: Active }">
+  <nav>
     <div class="nav-content">
       <nuxt-link to="/" tag="div" class="logo">
         <img src="~assets/logo/long.svg" alt="Project Falcon">
@@ -41,6 +41,7 @@ nav {
   transition: ease all 0.3s;
 
   .nav-content {
+    max-width: 77%;
     display: flex;
     align-items: center;
     padding: 2.25rem 0;

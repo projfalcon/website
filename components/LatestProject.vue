@@ -126,7 +126,7 @@ export default {
   @media (max-width: 1440px) {
     min-height: 20rem;
 
-    .content {
+    .container .content {
       max-width: 77%;
       grid-template-columns: minmax(0, 36.75rem) minmax(0, 1fr);
 
@@ -137,27 +137,26 @@ export default {
   }
 
   @media (max-width: 1280px) {
-    min-height: 20rem;
+    min-height: 18rem;
 
-    .content {
+    .container .content {
       max-width: 90%;
-      grid-template-columns: minmax(0, 36.75rem) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 37.5em) minmax(0, 1fr);
+      grid-gap: 0 3rem;
 
       .project-image img {
-        height: 20rem;
+        max-width: 37.5rem;
       }
     }
   }
 
-  @media (max-width: 1280px) {
-    min-height: 16rem;
-
-    .content {
-      grid-template-columns: minmax(0, 28.4375rem) minmax(0, 1fr);
-      grid-gap: 0 3rem;
+  @media (max-width: 1080px) {
+    .container .content {
+      max-width: 90%;
+      grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
 
       .project-image img {
-        height: 16rem;
+        max-width: 30rem;
       }
     }
   }

@@ -3,6 +3,10 @@
     <img id="triangle-illustration" src="~assets/media/misc/triangle.svg">
 
     <div class="container">
+      <h1 class="title">
+        What <span>we do.</span>
+      </h1>
+
       <div id="develop">
         <img src="~assets/media/illustrations/process/development.svg">
 
@@ -93,6 +97,11 @@ export default {
     bottom: 0;
     margin-bottom: 2.5rem;
     z-index: -1;
+
+    // MOBILE
+    @media (max-width: $mobile-breakpoint) {
+      transform: translateX(-45%);
+    }
   }
 
   .container {
@@ -102,10 +111,37 @@ export default {
     grid-gap: 0 7.5rem;
     margin: 0 auto;
 
+    h1.title {
+      position: relative;
+      grid-column: 1 / 13;
+      text-align: center;
+      margin: 0 auto 4.25rem auto;
+
+      span {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 0.25rem;
+          background-color: $text-primary;
+        }
+      }
+    }
+
     > div {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 12.5rem auto auto minmax(1rem, 1fr) auto;
+
+      &#design {
+        img {
+          transform: translateX(12%);
+        }
+      }
 
       > * {
         z-index: 10;
@@ -144,18 +180,28 @@ export default {
       }
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1w40px) {
       max-width: 1100px;
     }
 
     @media (max-width: 1280px) {
       max-width: 90%;
     }
-  }
 
-  #design {
-    img {
-      transform: translateX(12%);
+    // MOBILE
+    @media (max-width: $mobile-breakpoint) {
+      max-width: calc(100% - 4rem);
+      grid-template-columns: 1fr;
+      grid-gap: 4.5rem 0;
+
+      > div {
+        grid-column: 1 / 13;
+        grid-template-rows: auto auto minmax(1rem, 1fr) auto;
+
+        img {
+          display: none;
+        }
+      }
     }
   }
 }

@@ -46,7 +46,7 @@ export default {
   width: 100%;
   min-height: 27.625rem;
   display: flex;
-  margin: 12.5rem 0 6rem 0;
+  margin: 9.375rem 0 6rem 0;
 
   .container {
     width: 100%;
@@ -157,6 +157,40 @@ export default {
 
       .project-image img {
         max-width: 30rem;
+      }
+    }
+  }
+
+  // MOBILE
+  @media (max-width: $mobile-breakpoint) {
+    .container {
+      .content {
+        max-width: calc(100% - 4rem);
+        grid-template-rows: 10.5rem auto;
+        grid-template-columns: 1fr;
+        grid-gap: 3rem 0;
+
+        .project-image {
+          display: flex;
+          justify-content: center;
+
+          img {
+            display: block;
+            max-width: 20rem;
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+            object-fit: contain;
+          }
+        }
+
+        .project-description {
+          img#square {
+            top: calc(100% - 0.5rem);
+            right: 1.25rem;
+            width: 6rem;
+          }
+        }
       }
     }
   }

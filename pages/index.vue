@@ -27,6 +27,6 @@ export default {
 <style lang="scss" scoped>
 .container {
   min-height: calc(100vh - 10.5rem);
-  margin-top: 10.5rem;
+  margin-top: 6.125rem;
 }
 </style>

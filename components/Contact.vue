@@ -5,7 +5,7 @@
 
     <div class="container">
       <h2 class="title">
-        Contact us free of charge!
+        Contact us!
       </h2>
 
       <div id="form">
@@ -14,6 +14,10 @@
 
         <button class="btn btn-primary btn-rounded">
           Send message
+        </button>
+
+        <button class="btn btn-primary btn-rounded btn-mobile">
+          Send
         </button>
       </div>
 
@@ -86,12 +90,30 @@ export default {
       button {
         grid-column: 9 / 13;
         font-weight: 700;
+
+        &.btn-mobile {
+          display: none;
+        }
       }
     }
 
     .alternative-email {
       text-align: center;
       margin-top: 1.875rem;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      max-width: calc(100% - 4rem);
+
+      #form button {
+        &:not(.btn-mobile) {
+          display: none;
+        }
+
+        &.btn-mobile {
+          display: block;
+        }
+      }
     }
   }
 }

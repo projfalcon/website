@@ -65,7 +65,6 @@ export default {
       justify-content: flex-end;
 
       h1 {
-        text-align: left;
         margin-right: auto;
         margin-bottom: 1.875rem;
       }
@@ -77,9 +76,9 @@ export default {
       }
 
       &__actions {
-        button:not(:last-of-type) {
-          margin-right: 1rem;
-        }
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, max-content));
+        grid-gap: 0 1rem;
       }
 
       &__ellipse {
@@ -135,6 +134,38 @@ export default {
   }
 
   @media (max-width: 1080px) {
+  }
+
+  // MOBILE
+  @media (max-width: $mobile-breakpoint) {
+    &__container {
+      max-width: calc(100% - 4rem);
+
+      &-info {
+        grid-column: 1 / 13;
+
+        h1,
+        h3 {
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        h3 {
+          margin: 0 auto 2.5rem auto;
+        }
+
+        &__actions {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 0 1rem;
+        }
+      }
+
+      &-animation {
+        display: none;
+      }
+    }
   }
 }
 </style>

@@ -171,6 +171,7 @@ nav {
 
     // MOBILE
     @media (max-width: 860px) {
+      max-width: calc(100% - 4rem);
       padding: 2rem 0;
 
       &__mobile {

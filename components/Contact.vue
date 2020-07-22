@@ -115,6 +115,18 @@ export default {
         }
       }
     }
+
+    @media (max-width: $minimobile-breakpoint) {
+      #form {
+        grid-template-columns: minmax(0, 1fr);
+
+        textarea,
+        input,
+        button {
+          grid-column: 1 / 2;
+        }
+      }
+    }
   }
 }
 </style>

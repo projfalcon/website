@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 html,
 body {
   font-family: "Montserrat";
@@ -33,5 +33,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   overflow-x: hidden;
+
+  @media (max-width: 860px) {
+    overflow: auto;
+  }
 }
 </style>

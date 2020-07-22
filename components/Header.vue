@@ -140,9 +140,10 @@ export default {
   @media (max-width: $mobile-breakpoint) {
     &__container {
       max-width: calc(100% - 4rem);
+      grid-template-columns: minmax(0, 1fr);
 
       &-info {
-        grid-column: 1 / 13;
+        grid-column: 1 / 2;
 
         h1,
         h3 {
@@ -151,19 +152,34 @@ export default {
           margin-right: auto;
         }
 
+        h1 {
+          font-size: 2.5rem;
+        }
+
         h3 {
           margin: 0 auto 2.5rem auto;
         }
 
         &__actions {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(2, minmax(0,1fr));
           grid-gap: 0 1rem;
         }
       }
 
       &-animation {
         display: none;
+      }
+    }
+  }
+
+  @media (max-width: $minimobile-breakpoint) {
+    &__container {
+      &-info {
+        &__actions {
+          grid-template-columns: minmax(0, 1fr);
+          grid-gap: 1rem 0;
+        }
       }
     }
   }

@@ -1,11 +1,12 @@
 <template>
   <header class="c-Header">
-    <img class="c-Header__lines" src="~assets/media/misc/lines.svg">
+    <img class="c-Header__blob" src="~assets/media/misc/gradient-triangle.svg">
+    <!-- <img class="c-Header__lines" src="~assets/media/misc/lines.svg"> -->
 
     <div class="c-Header__container">
       <div class="c-Header__container-info">
         <h1 class="h1">
-          High-quality, blazing-fast.
+          High-<span class="highlighted">quality,</span> blazing-<span class="highlighted">fast.</span>
         </h1>
 
         <h3 class="h3">
@@ -18,7 +19,9 @@
           </nuxt-link>
 
           <nuxt-link to="/about" tag="button" class="btn btn-primary__fill btn-rounded">
-            What we do
+            <span>
+              What we do
+            </span>
           </nuxt-link>
         </div>
 
@@ -40,12 +43,11 @@ export default {
 
 <style lang="scss" scoped>
 .c-Header {
-  position: relative;
-
-  &__lines {
+  &__blob {
     position: absolute;
-    right: 61%;
-    height: 15rem;
+    top: 0;
+    left: -42.5%;
+    max-height: 61rem;
   }
 
   &__container {

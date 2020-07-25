@@ -2,7 +2,8 @@
   <div class="container">
     <Header />
     <LatestProject />
-    <OurProcess />
+    <WhatWeDo />
+    <Perks />
     <Contact />
   </div>
 </template>
@@ -11,14 +12,16 @@
 import Header from '@/components/Header'
 
 import LatestProject from '@/components/LatestProject'
-import OurProcess from '@/components/OurProcess'
+import WhatWeDo from '@/components/WhatWeDo'
+import Perks from '@/components/Perks'
 import Contact from '@/components/Contact'
 
 export default {
   components: {
     Header,
     LatestProject,
-    OurProcess,
+    WhatWeDo,
+    Perks,
     Contact
   }
 }

@@ -8,11 +8,7 @@
       </h1>
 
       <div id="develop">
-        <img src="~assets/media/illustrations/process/development.svg">
-
-        <p class="subtitle">
-          &#60;/&#62;
-        </p>
+        <img src="~assets/media/illustrations/what-we-do/development.svg">
 
         <h2 class="h2 title">
           Development
@@ -23,17 +19,13 @@
           We code depending on your needs.
         </h5>
 
-        <nuxt-link to="/" tag="h4" class="h4 link">
+        <nuxt-link to="/" tag="h4" class="h4 link text-primary">
           Read More  →
         </nuxt-link>
       </div>
 
       <div id="design">
-        <img src="~assets/media/illustrations/process/design.svg">
-
-        <p class="subtitle">
-          • | .
-        </p>
+        <img src="~assets/media/illustrations/what-we-do/design.svg">
 
         <h2 class="h2 title">
           Design
@@ -44,28 +36,24 @@
           before commiting.
         </h5>
 
-        <nuxt-link to="/" tag="h4" class="h4 link">
+        <nuxt-link to="/" tag="h4" class="h4 link text-primary">
           Read More  →
         </nuxt-link>
       </div>
 
       <div id="thinking">
-        <img src="~assets/media/illustrations/process/thinking.svg">
-
-        <p class="subtitle">
-          1 + 2 = 3
-        </p>
+        <img src="~assets/media/illustrations/what-we-do/thinking.svg">
 
         <h2 class="h2 title">
           Thinking
         </h2>
 
         <h5 class="h5 description">
-          Whether you need a E-Commerce, a landing page or an app we are here
+          Whether you need an E-Commerce, a landing page or an app we are here
           for you to help decide what’s best.
         </h5>
 
-        <nuxt-link to="/" tag="h4" class="h4 link">
+        <nuxt-link to="/" tag="h4" class="h4 link text-primary">
           Read More  →
         </nuxt-link>
       </div>
@@ -75,22 +63,13 @@
 
 <script>
 export default {
-  data () {
-    return {
-      Subtitles: {
-        Development: '</>',
-        Design: '• | .',
-        Thinking: '1 + 2 = 3'
-      }
-    }
-  }
 }
 </script>
 
 <style lang="scss" scoped>
 #process {
   position: relative;
-  margin: 11.25rem auto 0 auto;
+  margin: 13.4375rem auto 0 auto;
 
   img#triangle-illustration {
     position: absolute;
@@ -113,9 +92,9 @@ export default {
 
     h1.title {
       position: relative;
-      grid-column: 1 / 13;
+      grid-column: 1 / 4;
       text-align: center;
-      margin: 0 auto 4.25rem auto;
+      margin: 0 auto 5.625rem auto;
 
       span {
         position: relative;
@@ -135,33 +114,21 @@ export default {
     > div {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 12.5rem auto auto minmax(1rem, 1fr) auto;
-
-      &#design {
-        img {
-          transform: translateX(12%);
-        }
-      }
+      grid-template-rows: minmax(0, 7.5rem) auto minmax(1rem, 1fr) auto;
 
       > * {
         z-index: 10;
       }
 
       img {
-        max-height: 12.5rem;
+        max-height: 7.5rem;
         display: block;
         margin: 0 auto;
       }
 
-      p.subtitle {
-        color: $primary;
-        text-align: center;
-        margin-top: 2rem;
-      }
-
       h2.title {
         text-align: center;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.125rem;
       }
 
       h5.description {
@@ -180,7 +147,7 @@ export default {
       }
     }
 
-    @media (min-width: 1w40px) {
+    @media (min-width: 1440px) {
       max-width: 1100px;
     }
 

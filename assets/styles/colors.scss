@@ -1,0 +1,32 @@
+$black: #1D1D1D;
+// $blue: #2D7FF9;
+// $red: #F82B60;
+// $yellow: #FFBF1C;
+$grey: #808080;
+$lightgrey: #F2F2F2;
+
+
+$blue: #2D41F9;
+$rose: #DE85FD;
+
+$primary: linear-gradient(135deg, $blue, $rose);
+$primary-dark: linear-gradient(135deg, darken($blue, 10), darken($rose, 10));
+
+/**
+$primary: $blue;
+$secondary: $red;
+$tertiary: $yellow;
+
+**/
+
+$text-primary: $black;
+$text-secondary: $grey;
+
+$border-primary: $grey;
+
+
+.text-primary {
+  background: $primary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -61,9 +61,9 @@
                 Work
               </nuxt-link>
 
-              <nuxt-link to="#" tag="a" class="colored highlighted-underlined">
+              <a class="colored highlighted-underlined">
                 Get in touch
-              </nuxt-link>
+              </a>
             </div>
           </div>
         </div>

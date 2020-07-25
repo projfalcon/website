@@ -160,8 +160,9 @@ button {
 
 .highlighted {
   background-image: $primary;
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 a.highlighted {
@@ -171,7 +172,30 @@ a.highlighted {
   &:focus,
   &:visited,
   &:hover {
-    color: $primary;
+    color: transparent;
+  }
+}
+
+.highlighted-underlined {
+  position: relative;
+  background-image: $primary;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0.125rem;
+    background: $primary;
+    transition: 0.3s ease all;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 }
 

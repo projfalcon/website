@@ -152,7 +152,7 @@ nav {
             bottom: 0;
             width: 0;
             height: 0.125rem;
-            background-color: $primary;
+            background: $primary;
             transition: 0.3s ease all;
           }
 

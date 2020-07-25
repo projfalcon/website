@@ -3,6 +3,9 @@
     <Header />
     <LatestProject />
     <WhatWeDo />
+
+    <span id="what-we-do-perks-separator" class="hr" />
+
     <Perks />
     <Contact />
   </div>
@@ -31,5 +34,11 @@ export default {
 .container {
   min-height: calc(100vh - 10.5rem);
   margin-top: 6.125rem;
+
+  @media (min-width: $mobile-breakpoint) {
+    span.hr#what-we-do-perks-separator {
+      display: none;
+    }
+  }
 }
 </style>

@@ -54,7 +54,7 @@ export default {
     top: 4rem;
     left: 0;
     z-index: -1;
-    height: 24rem;
+    max-height: 38.1875rem;
     background-blend-mode: hard light;
     transform: translateX(-50%);
   }
@@ -111,7 +111,7 @@ export default {
     @media (max-width: $mobile-breakpoint) {
       max-width: calc(100% - 4rem);
 
-      #form button {
+      #form #submit {
         &:not(.btn-mobile) {
           display: none;
         }

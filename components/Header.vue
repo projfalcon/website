@@ -1,8 +1,8 @@
 <template>
   <header class="c-Header">
-    <div class="c-Header__blob" />
-
     <div class="c-Header__container">
+      <img class="c-Header__container-blob" src="~assets/media/misc/gradient-rounded-triangle.svg">
+
       <div class="c-Header__container-info">
         <h1 class="h1">
           High-<span class="highlighted">quality,</span> blazing-<span class="highlighted">fast.</span>
@@ -42,22 +42,6 @@ export default {
 
 <style lang="scss" scoped>
 .c-Header {
-  &__blob {
-    position: absolute;
-    z-index: -100;
-    top: 0;
-    left: 0;
-    // right: 0;
-    width: 69.25rem;
-    height: 100%;
-    max-height: 61.8125rem;
-    background: url('~assets/media/misc/gradient-triangle.svg');
-    background-size: 100%;
-    mix-blend-mode: hard-light;
-    // margin-right: 61%;
-    transform: translateX(-50%);
-  }
-
   &__container {
     position: relative;
     z-index: 2;
@@ -66,6 +50,17 @@ export default {
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 0 2rem;
     margin: 0 auto;
+
+    &-blob {
+      position: absolute;
+      z-index: -100;
+      top: -12.625rem;
+      left: 0;
+      max-height: 57.625rem;
+      display: block;
+      object-fit: cover;
+      transform: translateX(-79.5%);
+    }
 
     &-info {
       position: relative;
@@ -135,6 +130,14 @@ export default {
     }
   }
 
+  @media (max-width: 1080px) {
+    &__container {
+      &-blob {
+        transform: translateX(-82.5%);
+      }
+    }
+  }
+
   // MOBILE
   @media (max-width: $mobile-breakpoint) {
     &__container {
@@ -176,8 +179,8 @@ export default {
     &__container {
       &-info {
         &__actions {
-          grid-template-columns: minmax(0, 1fr);
-          grid-gap: 1rem 0;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-gap: 1rem;
         }
       }
     }

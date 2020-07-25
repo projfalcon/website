@@ -8,14 +8,18 @@
       </h1>
 
       <div id="form">
-        <textarea v-model="Message" rows="4" placeholder="Your message goes here..." maxlength="512" />
-        <input v-model="Email" placeholder="Enter your email" type="text">
+        <div id="message" class="input-container">
+          <textarea v-model="Message" rows="4" placeholder="Your message goes here..." maxlength="512" />
+        </div>
+        <div id="email" class="input-container">
+          <input v-model="Email" placeholder="Enter your email" type="text">
+        </div>
 
-        <button class="btn btn-primary btn-rounded">
+        <button id="submit" class="btn btn-primary btn-rounded">
           Send message
         </button>
 
-        <button class="btn btn-primary btn-rounded btn-mobile">
+        <button id="submit" class="btn btn-primary btn-rounded btn-mobile">
           Send
         </button>
       </div>
@@ -77,19 +81,15 @@ export default {
       grid-template-columns: repeat(12, 1fr);
       grid-gap: 1rem;
 
-      > * {
-        z-index: 10;
-      }
-
-      textarea {
+      #message {
         grid-column: 1 / 13;
       }
 
-      input {
+      #email {
         grid-column: 1 / 9;
       }
 
-      button {
+      #submit {
         grid-column: 9 / 13;
         font-weight: 700;
 
@@ -126,9 +126,9 @@ export default {
       #form {
         grid-template-columns: minmax(0, 1fr);
 
-        textarea,
-        input,
-        button {
+        #message,
+        #email,
+        #submit {
           grid-column: 1 / 2;
         }
       }

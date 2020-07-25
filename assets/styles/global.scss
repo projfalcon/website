@@ -184,7 +184,8 @@ a.highlighted {
 textarea {
   background: $primary;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
+  caret-color: $rose;
   font-family: "Hind";
   font-size: 1rem;
   line-height: 1.5rem;
@@ -195,25 +196,38 @@ textarea {
   resize: none;
 
   &::placeholder {
-    color: $primary;
+    background: $primary;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10rem;
+    height: 10rem;
+    background-image: $primary;
   }
 }
 
 input {
-  // background: $primary;
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
   position: relative;
-  background: yellow padding-box;
+  background: $primary;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  caret-color: $rose;
   font-family: "Hind";
   font-size: 1rem;
   line-height: 1.5rem;
   padding: 0.5rem 0.875rem;
-  border: 1px solid transparent;
+  border: 1px solid $grey;
   border-radius: 0.25rem;
   outline: none;
 
-  &::after {
+  &::before {
     content: '';
     position: absolute;
     z-index: 1;
@@ -221,11 +235,14 @@ input {
     left: -1px;
     width: 100%;
     height: 100%;
-    background: $primary;
+    background-image: $primary;
     margin: 1px;
   }
 
   &::placeholder {
-    color: $primary;
+    background: $primary;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 }

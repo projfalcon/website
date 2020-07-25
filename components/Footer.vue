@@ -123,7 +123,7 @@ footer {
         }
 
         &:hover {
-          color: $primary;
+          color: $blue;
         }
       }
     }

@@ -1,12 +1,11 @@
 <template>
   <div id="contact-us">
-    <img id="ellipse" src="~assets/media/misc/ellipse.svg">
-    <img id="lines" src="~assets/media/misc/lines-inverted.svg">
+    <img id="blob" src="~assets/media/misc/gradient-blob.svg">
 
     <div class="container">
-      <h2 class="title">
+      <h1 class="h1 title">
         Contact us!
-      </h2>
+      </h1>
 
       <div id="form">
         <textarea v-model="Message" rows="4" placeholder="Your message goes here..." maxlength="512" />
@@ -42,15 +41,17 @@ export default {
 <style lang="scss" scoped>
 #contact-us {
   position: relative;
-  padding-top: 10.625rem;
+  padding-top: 16.25rem;
   margin-bottom: 10.625rem;
   overflow: hidden;
 
-  #ellipse {
+  #blob {
     position: absolute;
-    top: 8.5rem;
-    left: calc(75% - 1.5rem);
+    top: 4rem;
+    left: 0;
     z-index: -1;
+    height: 24rem;
+    transform: translateX(-50%);
   }
 
   #lines {
@@ -67,7 +68,7 @@ export default {
 
     .title {
       text-align: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
 
     #form {

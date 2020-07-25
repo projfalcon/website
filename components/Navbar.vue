@@ -103,7 +103,7 @@ nav {
       display: flex;
 
       .links a:not(:last-of-type) {
-        margin-left: 3rem;
+        margin-right: 3rem;
       }
     }
 
@@ -141,7 +141,9 @@ nav {
         &.colored {
           position: relative;
           font-weight: 700;
-          color: $primary;
+          background: $primary;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
 
           &::after {
             content: '';
@@ -190,7 +192,7 @@ nav {
             font-size: 1rem;
             line-height: 1.5rem;
             background-color: #fff;
-            color: $secondary;
+            color: $primary;
             padding: 0.125rem 0.25rem;
             border: none;
             transition: ease color 0.3s;
@@ -202,7 +204,7 @@ nav {
               bottom: 0;
               width: 100%;
               height: 0.125rem;
-              background-color: $secondary;
+              background-color: $primary;
               transition: 0.3s ease all;
             }
           }

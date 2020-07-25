@@ -1,13 +1,16 @@
 <template>
   <div id="latest-solution">
+    <img id="background" src="~assets/media/misc/wave.svg">
+
     <div class="container">
       <div class="content">
         <div class="project-image">
-          <img src="~assets/media/projects/gruporeis.svg">
+          <img class="desktop" src="~assets/media/projects/drfarma/drfarma.svg">
+          <img class="mobile" src="~assets/media/projects/drfarma/drfarma-mobile.svg">
         </div>
 
         <div class="project-description">
-          <p class="subtitle">
+          <p class="subtitle text-primary">
             LATEST SOLUTION
           </p>
 
@@ -23,7 +26,7 @@
             an app we are here.
           </h5>
 
-          <nuxt-link id="read-more" to="" tag="h4" class="h4 link">
+          <nuxt-link id="read-more" to="" tag="h4" class="h4 link text-primary">
             Read More  →
           </nuxt-link>
 
@@ -48,18 +51,26 @@ export default {
   display: flex;
   margin: 9.375rem 0 6rem 0;
 
+  #background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    max-height: 55rem;
+    transform: translateX(-30%);
+  }
+
   .container {
     width: 100%;
     min-height: 22.5rem;
-    background-color: #E8F8FF;
-    padding: 2.125rem 0;
-    margin: 5.125rem auto 0 auto;
+    padding: 4rem 0;
+    margin: 13.75rem auto 0 auto;
 
     .content {
       position: relative;
       display: grid;
       grid-template-columns: minmax(0, 37.5rem) minmax(0, 1fr);
-      grid-gap: 0 7.5rem;
+      grid-gap: 0 8.5rem;
       margin: 0 auto;
 
       * {
@@ -71,20 +82,25 @@ export default {
 
         img {
           position: absolute;
-          top: -5.125rem;
-          height: 22.5rem;
+          top: -9.125rem;
           display: block;
-          object-fit: cover;
           border-radius: 0.25rem;
+          box-shadow: 0 0 7.75rem 0 #00000010;
+
+          &.desktop {
+            height: 25rem;
+          }
+
+          &.mobile {
+            right: -4rem;
+            top: 2rem;
+            max-width: 14rem;
+          }
         }
       }
 
       .project-description {
         position: relative;
-
-        p.subtitle {
-          color: $primary;
-        }
 
         h2#project-title {
           margin-bottom: 1.25rem;
@@ -98,7 +114,6 @@ export default {
         h4#read-more {
           max-width: max-container;
           display: block;
-          color: $primary;
           cursor: pointer;
         }
 
@@ -141,11 +156,11 @@ export default {
 
     .container .content {
       max-width: 90%;
-      grid-template-columns: minmax(0, 37.5em) minmax(0, 1fr);
-      grid-gap: 0 3rem;
+      grid-template-columns: minmax(0, 30em) minmax(0, 1fr);
+      grid-gap: 0 7.5rem;
 
       .project-image img {
-        max-width: 37.5rem;
+        max-width: 30rem;
       }
     }
   }

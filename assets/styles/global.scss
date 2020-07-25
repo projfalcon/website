@@ -106,7 +106,7 @@ button {
     }
 
     &.btn-rounded {
-      border-radius: 0.25rem;
+      border-radius: 0.3125rem;
 
       &__big {
         border-radius: 0.5rem;
@@ -230,7 +230,7 @@ textarea {
   line-height: 1.5rem;
   padding: 0.5rem 0.875rem;
   border: 1px solid $primary;
-  border-radius: 0.25rem;
+  border-radius: 0.3125rem;
   outline: none;
   resize: none;
 
@@ -263,7 +263,7 @@ input {
   line-height: 1.5rem;
   padding: 0.5rem 0.875rem;
   border: 1px solid $grey;
-  border-radius: 0.25rem;
+  border-radius: 0.3125rem;
   outline: none;
 
   &::before {

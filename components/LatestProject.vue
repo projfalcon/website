@@ -84,7 +84,7 @@ export default {
           position: absolute;
           top: -9.125rem;
           display: block;
-          border-radius: 0.25rem;
+          border-radius: 0.3125rem;
           box-shadow: 0 0 7.75rem 0 #00000010;
 
           &.desktop {

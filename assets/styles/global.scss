@@ -19,6 +19,7 @@ main {
 button {
   position: relative;
   z-index: 10;
+  box-sizing: border-box;
   -webkit-appearance: none;
   background: $lightgrey;
   color: #fff;
@@ -27,7 +28,7 @@ button {
   font-size: 1rem;
   line-height: 1.375rem;
   padding: 0.875rem 1.25rem;
-  border: 1px solid $lightgrey;
+  border: none;
   outline: none;
   cursor: pointer;
   transition: ease all 0.3s;
@@ -40,7 +41,7 @@ button {
     &.btn-primary {
       background: $primary;
 
-      &::before {
+      &:before {
         content: '';
         position: absolute;
         z-index: -100;
@@ -61,31 +62,48 @@ button {
     }
 
     &.btn-primary__fill {
-      position: relative;
-      z-index: 0;
-      box-sizing: border-box;
-      background: #fff;
+      background: orange;
       background-clip: padding-box;
       padding: 0.875rem 1.25rem;
       border: solid 1px transparent;
       border-radius: inherit;
 
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -1px; /* !importanté */
+        border-radius: inherit; /* !importanté */
+        background: $primary;
+        transition: 0.3s ease all;
+      }
+
       &:after {
         content: '';
+        z-index: 0;
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        z-index: -1;
-        margin: -1px;
+        background: #fff;
         border-radius: inherit;
-        background: $primary;
+        transition: 0.3s ease all;
       }
 
       span {
         position: relative;
         z-index: 10;
+        background: $primary;
+        background-clip: text;
+        color: transparent;
+      }
+
+      &:hover {
+        &:before {
+          margin: -2px;
+        }
       }
     }
 

@@ -69,6 +69,16 @@ export default {
       h1 {
         margin-right: auto;
         margin-bottom: 1.875rem;
+
+        span.highlighted {
+          &:first-of-type {
+            color: #6C59FA;
+          }
+
+          &:last-of-type {
+            color: #9C6CFC;
+          }
+        }
       }
 
       h3 {

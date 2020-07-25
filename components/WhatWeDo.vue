@@ -128,7 +128,7 @@ export default {
 
       h2.title {
         text-align: center;
-        margin-bottom: 1.125rem;
+        margin: 3.76rem auto 1.125rem auto;
       }
 
       h5.description {

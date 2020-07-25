@@ -1,7 +1,6 @@
 <template>
   <header class="c-Header">
-    <img class="c-Header__blob" src="~assets/media/misc/gradient-triangle.svg">
-    <!-- <img class="c-Header__lines" src="~assets/media/misc/lines.svg"> -->
+    <div class="c-Header__blob" />
 
     <div class="c-Header__container">
       <div class="c-Header__container-info">
@@ -45,9 +44,18 @@ export default {
 .c-Header {
   &__blob {
     position: absolute;
+    z-index: -100;
     top: 0;
-    left: -42.5%;
-    max-height: 61rem;
+    left: 0;
+    // right: 0;
+    width: 69.25rem;
+    height: 100%;
+    max-height: 61.8125rem;
+    background: url('~assets/media/misc/gradient-triangle.svg');
+    background-size: 100%;
+    mix-blend-mode: hard-light;
+    // margin-right: 61%;
+    transform: translateX(-50%);
   }
 
   &__container {
@@ -72,11 +80,11 @@ export default {
 
         span.highlighted {
           &:first-of-type {
-            color: #6C59FA;
+            color: $rose-blue;
           }
 
           &:last-of-type {
-            color: #9C6CFC;
+            color: $light-rose;
           }
         }
       }
@@ -115,24 +123,6 @@ export default {
     }
   }
 
-  @media (max-width: 2560px) {
-    &__lines {
-      right: 65%;
-    }
-  }
-
-  @media (max-width: 1920px) {
-    &__lines {
-      right: 70%;
-    }
-  }
-
-  @media (max-width: 1690px) {
-    &__lines {
-      right: 75%;
-    }
-  }
-
   @media (min-width: 1440px) {
     &__container {
       max-width: 1100px;
@@ -143,9 +133,6 @@ export default {
     &__container {
       max-width: 90%;
     }
-  }
-
-  @media (max-width: 1080px) {
   }
 
   // MOBILE

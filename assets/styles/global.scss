@@ -38,11 +38,6 @@ button {
     &.btn-primary {
       background: $primary;
       border: 1px solid $primary;
-
-      &:hover {
-        background: $primary-dark;
-        border: 1px solid $primary;
-      }
     }
 
     &.btn-primary__fill {

@@ -21,7 +21,7 @@
       </div>
 
       <p class="h6 alternative-email">
-        Or just contact us through <a href="mailto:talk@projectfalcon.studio" class="highlighted">talk@projectfalcon.studio</a>
+        Or just contact us through <a href="mailto:talk@projectfalcon.studio" class="highlighted-underlined">talk@projectfalcon.studio</a>
       </p>
     </div>
   </div>
@@ -51,6 +51,7 @@ export default {
     left: 0;
     z-index: -1;
     height: 24rem;
+    background-blend-mode: hard light;
     transform: translateX(-50%);
   }
 

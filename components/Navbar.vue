@@ -61,7 +61,7 @@
                 Work
               </nuxt-link>
 
-              <nuxt-link to="#" tag="a" class="colored">
+              <nuxt-link to="#" tag="a" class="colored highlighted-underlined">
                 Get in touch
               </nuxt-link>
             </div>
@@ -141,9 +141,10 @@ nav {
         &.colored {
           position: relative;
           font-weight: 700;
-          background: $primary;
+          background-image: $primary;
+          background-clip: text;
           -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color: transparent;
 
           &::after {
             content: '';

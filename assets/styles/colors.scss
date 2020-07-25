@@ -27,6 +27,8 @@ $border-primary: $grey;
 
 .text-primary {
   background: $primary;
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-blend-mode: hard-light;
+  color: transparent;
 }

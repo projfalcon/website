@@ -102,6 +102,10 @@ export default {
     .alternative-email {
       text-align: center;
       margin-top: 1.875rem;
+
+      a:after {
+        height: 0.06125rem;
+      }
     }
 
     @media (max-width: $mobile-breakpoint) {

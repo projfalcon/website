@@ -62,48 +62,13 @@ button {
     }
 
     &.btn-primary__fill {
-      background: orange;
-      background-clip: padding-box;
-      padding: 0.875rem 1.25rem;
-      border: solid 1px transparent;
-      border-radius: inherit;
-
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        z-index: -1;
-        margin: -1px; /* !importanté */
-        border-radius: inherit; /* !importanté */
-        background: $primary;
-        transition: 0.3s ease all;
-      }
-
-      &:after {
-        content: '';
-        z-index: 0;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: #fff;
-        border-radius: inherit;
-        transition: 0.3s ease all;
-      }
-
-      span {
-        position: relative;
-        z-index: 10;
-        background: $primary;
-        background-clip: text;
-        color: transparent;
-      }
+      background-color: transparent;
+      color: $blue;
+      border: 1px solid $blue;
+      transition: 0.3s ease all;
 
       &:hover {
-        &:before {
-          margin: -2px;
-        }
+        box-shadow: 0 0 0 1px $blue inset;
       }
     }
 

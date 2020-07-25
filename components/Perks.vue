@@ -79,6 +79,12 @@ export default {
     right: -1.5rem;
     z-index: -1;
     transform: rotate(90deg);
+
+    @media (max-width: $mobile-breakpoint) {
+      top: 30%;
+      right: -2.3125rem;
+      height: 4.625rem;
+    }
   }
 
   .container {
@@ -98,6 +104,10 @@ export default {
 
         .description {
           text-align: right;
+
+          .h5 {
+            margin-left: auto;
+          }
         }
       }
 
@@ -108,6 +118,10 @@ export default {
           grid-row: 1;
           grid-column: 2 / 3;
           text-align: left;
+
+          .h5 {
+            margin-right: auto;
+          }
         }
 
         .illustration {
@@ -125,6 +139,7 @@ export default {
 
         .h5 {
           color: $grey;
+          max-width: 24rem;
         }
       }
 
@@ -148,16 +163,40 @@ export default {
     @media (max-width: $mobile-breakpoint) {
       max-width: calc(100% - 4rem);
       grid-template-columns: 1fr;
-      grid-gap: 4.5rem 0;
+      grid-gap: 5.625rem 0;
 
-      > div {
-        grid-template-columns: auto auto minmax(1rem, 1fr) auto;
+      > div.right,
+      > div.left {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 3rem;
 
-        img {
-          display: none;
+        .description {
+          grid-row: 2;
+          grid-column: 1 / 2;
+          padding: 0;
+
+          .h2,
+          .h5 {
+            max-width: 100%;
+            text-align: center;
+          }
+        }
+
+        .illustration {
+          grid-row: 1;
+          grid-column: 1 / 2;
+
+          img {
+            max-height: 9.375rem;
+            margin: 0 auto;
+          }
         }
       }
     }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    margin-top: 6.875rem;
   }
 }
 </style>

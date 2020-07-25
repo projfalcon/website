@@ -3,7 +3,7 @@
     <img id="triangle-illustration" src="~assets/media/misc/triangle.svg">
 
     <div class="container">
-      <h1 class="title">
+      <h1 class="h1 title">
         What <span>we do.</span>
       </h1>
 
@@ -79,7 +79,9 @@ export default {
 
     // MOBILE
     @media (max-width: $mobile-breakpoint) {
-      transform: translateX(-45%);
+      bottom: 12.5rem;
+      height: 6rem;
+      transform: translateX(-60%);
     }
   }
 
@@ -98,6 +100,7 @@ export default {
 
       span {
         position: relative;
+        white-space: nowrap;
 
         &::after {
           content: '';
@@ -128,7 +131,7 @@ export default {
 
       h2.title {
         text-align: center;
-        margin: 3.76rem auto 1.125rem auto;
+        margin: 3.75rem auto 1.25rem auto;
       }
 
       h5.description {
@@ -159,17 +162,29 @@ export default {
     @media (max-width: $mobile-breakpoint) {
       max-width: calc(100% - 4rem);
       grid-template-columns: 1fr;
-      grid-gap: 4.5rem 0;
+      grid-gap: 5.625rem 0;
+
+      h1.title {
+        margin: 0 auto 0.5rem auto;
+      }
 
       > div {
         grid-column: 1 / 13;
         grid-template-rows: auto auto minmax(1rem, 1fr) auto;
 
         img {
-          display: none;
+          max-height: 3.75rem;
+        }
+
+        h2.title {
+          margin-top: 2.5rem;
         }
       }
     }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    margin-bottom: 5.4375rem;
   }
 }
 </style>

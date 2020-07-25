@@ -15,7 +15,7 @@
           </p>
 
           <h2 id="project-title" class="h2">
-            Pharmacy E-Commerce
+            Pharmacy <br>E-Commerce
           </h2>
 
           <h5 id="project-long__description" class="h5">
@@ -53,11 +53,11 @@ export default {
 
   #background {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     z-index: 0;
-    max-height: 55rem;
-    transform: translateX(-30%);
+    max-height: 56.25rem;
+    transform: translate(-50%, -38%);
   }
 
   .container {
@@ -93,7 +93,7 @@ export default {
 
           &.mobile {
             right: -4rem;
-            top: 2rem;
+            top: 4rem;
             max-width: 14rem;
           }
         }
@@ -178,12 +178,22 @@ export default {
 
   // MOBILE
   @media (max-width: $mobile-breakpoint) {
+    margin: 0 0 7.5rem 0;
+
+    #background {
+      max-height: unset;
+      height: 85rem;
+    }
+
     .container {
+      padding: 4.25rem 0 0 0;
+      margin: 0 auto;
+
       .content {
         max-width: calc(100% - 4rem);
-        grid-template-rows: 10.5rem auto;
+        grid-template-rows: 40rem auto;
         grid-template-columns: 1fr;
-        grid-gap: 3rem 0;
+        grid-gap: 0;
 
         .project-image {
           display: flex;
@@ -196,14 +206,57 @@ export default {
             height: auto;
             margin: 0 auto;
             object-fit: contain;
+
+            &.desktop {
+              top: unset;
+              bottom: 6rem;
+              left: 0;
+              max-width: calc(100% - 1.5rem);
+              height: unset;
+              border-radius: 0.625rem;
+              margin: 0;
+            }
+
+            &.mobile {
+              top: unset;
+              right: 0;
+              bottom: 1rem;
+              max-width: 10rem;
+              height: unset;
+              border-radius: 0.625rem;
+            }
           }
         }
 
         .project-description {
           img#square {
-            top: calc(100% - 0.5rem);
-            right: 1.25rem;
-            width: 6rem;
+            top: calc(100% + 3rem);
+            right: -2rem;
+            transform: translateX(50%);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $minimobile-breakpoint) {
+    #background {
+      height: 75rem;
+    }
+
+    .container {
+      .content {
+        grid-template-rows: 24rem auto;
+
+        .project-image {
+          img.mobile {
+            max-width: 6rem;
+          }
+        }
+
+        .project-description {
+          img#square {
+            top: calc(100% + 1.5rem);
           }
         }
       }

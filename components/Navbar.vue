@@ -34,7 +34,7 @@
       </nuxt-link>
 
       <div class="drawer-toggle" @click="toggleDrawer">
-        <button>
+        <button class="text-primary">
           Menu
         </button>
       </div>
@@ -89,6 +89,8 @@ export default {
 
 <style lang="scss" scoped>
 nav {
+  position: relative;
+  z-index: 1000;
   width: 100%;
   transition: ease all 0.3s;
 
@@ -189,9 +191,10 @@ nav {
             position: relative;
             display: block;
             font-family: "Hind";
-            text-decoration: none;
+            font-weight: 700;
             font-size: 1rem;
             line-height: 1.5rem;
+            text-decoration: none;
             background-color: #fff;
             color: $primary;
             padding: 0.125rem 0.25rem;
@@ -202,10 +205,10 @@ nav {
               content: '';
               position: absolute;
               left: 0;
-              bottom: 0;
+              bottom: -0.25rem;
               width: 100%;
               height: 0.125rem;
-              background-color: $primary;
+              background: $primary;
               transition: 0.3s ease all;
             }
           }

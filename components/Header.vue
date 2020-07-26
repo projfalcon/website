@@ -42,6 +42,8 @@ export default {
 
 <style lang="scss" scoped>
 .c-Header {
+  padding-top: 11.8125rem;
+
   &__container {
     position: relative;
     z-index: 2;
@@ -54,12 +56,12 @@ export default {
     &-blob {
       position: absolute;
       z-index: -100;
-      top: -12.625rem;
+      top: -19.25rem;
       left: 0;
-      max-height: 57.625rem;
+      max-height: 62.5rem;
       display: block;
       object-fit: cover;
-      transform: translateX(-79.5%);
+      transform: translateX(-74%);
     }
 
     &-info {
@@ -140,13 +142,22 @@ export default {
 
   // MOBILE
   @media (max-width: $mobile-breakpoint) {
+    height: 100vh;
+    padding-top: 0;
+    // transform: translateY(-6.625rem);
+
     &__container {
       max-width: calc(100% - 4rem);
-      grid-template-columns: minmax(0, 1fr);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-blob {
+        transform: translateX(-74%) translateY(6rem);
+      }
 
       &-info {
-        grid-column: 1 / 2;
-
         h1,
         h3 {
           text-align: center;

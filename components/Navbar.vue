@@ -93,7 +93,9 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 1000;
   width: 100%;
   transition: ease all 0.3s;

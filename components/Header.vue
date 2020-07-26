@@ -156,9 +156,11 @@ export default {
 
         h1 {
           font-size: 2.5rem;
+          line-height: calc(3rem + 1px);
         }
 
         h3 {
+          line-height: calc(1.625rem + 1px);
           margin: 0 auto 2.5rem auto;
         }
 

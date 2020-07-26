@@ -57,14 +57,12 @@ export default {
     max-height: 38.1875rem;
     background-blend-mode: hard light;
     transform: translateX(-50%);
-  }
 
-  #lines {
-    position: absolute;
-    top: 2.5rem;
-    left: 75%;
-    height: 15rem;
-    z-index: -2;
+    @media (max-width: $mobile-breakpoint) {
+      top: -2.5rem;
+      max-width: 18.5rem;
+      transform: translateX(-55%);
+    }
   }
 
   .container {

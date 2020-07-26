@@ -182,6 +182,12 @@ nav {
       &__mobile {
         display: flex;
 
+        .logo {
+          img {
+            max-height: 2.625rem;
+          }
+        }
+
         .drawer-toggle {
           display: flex;
           margin-left: auto;

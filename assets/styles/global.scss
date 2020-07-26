@@ -245,11 +245,12 @@ textarea {
 }
 
 input {
-  position: relative;
+  // position: relative;
   background: $primary, linear-gradient(white, white), $primary;
   background-origin: border-box;
   -webkit-background-clip: text, padding-box, border-box;
   color: transparent;
+  -webkit-text-fill-color: transparent;
   caret-color: $rose;
   font-family: "Hind";
   font-size: 1rem;

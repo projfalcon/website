@@ -49,7 +49,7 @@ export default {
   width: 100%;
   min-height: 27.625rem;
   display: flex;
-  margin: 9.375rem 0 6rem 0;
+  margin: 3.06125rem 0 6rem 0;
 
   #background {
     position: absolute;

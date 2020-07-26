@@ -40,10 +40,14 @@
       </div>
 
       <div :class="{ active: Active }" class="drawer">
-        <div class="overlay" @click="toggleDrawer" />
-
         <div class="container">
           <div class="content">
+            <div class="close">
+              <a href="#" @click="toggleDrawer">
+                Close
+              </a>
+            </div>
+
             <div class="links">
               <nuxt-link id="home-link" to="/" tag="a">
                 Home
@@ -232,47 +236,70 @@ nav {
             }
           }
 
-          .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 99;
-            display: none;
-            opacity: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #00000030;
-            transition: 0.3s ease all;
-            cursor: pointer;
-          }
-
           .container {
             position: fixed;
             top: 0;
             right: 0;
             z-index: 100;
             height: 100%;
-            min-width: 50vw;
+            width: 100vw;
             background-color: #fff;
             box-shadow: 0 0 7.5px 5px rgba(0,0,0,.04);
             transform: translateX(100%);
             transition: 0.3s ease all;
 
             .content {
+              position: relative;
+              height: 100%;
               display: flex;
               flex-direction: column;
               padding: 2rem;
 
+              .close {
+                position: absolute;
+                top: 2.5rem;
+                right: 2rem;
+
+                a {
+                  background: $primary;
+                  -webkit-background-clip: text;
+                  color: transparent;
+                  font-family: "Hind";
+                  font-weight: 700;
+                  text-decoration: none;
+
+                  &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 0.125rem;
+                    background: $primary;
+                    transition: 0.3s ease all;
+                  }
+                }
+              }
+
               .links {
+                height: 100%;
                 display: flex;
+                justify-content: center;
                 flex-direction: column;
                 margin: 0;
 
                 a {
+                  font-size: 1.375rem;
+                  font-weight: 300;
+                  line-height: 150%;
                   text-align: center;
 
                   &:not(:last-of-type) {
-                    margin-bottom: 1rem;
+                    margin-bottom: 2rem;
+                  }
+
+                  &.colored {
+                    font-weight: 700;
                   }
                 }
               }

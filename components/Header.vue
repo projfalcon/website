@@ -79,7 +79,7 @@ export default {
           }
 
           &:last-of-type {
-            color: $light-rose;
+            color: $light-violet;
           }
         }
       }

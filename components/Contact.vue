@@ -25,7 +25,7 @@
       </div>
 
       <p class="h6 alternative-email">
-        Or just contact us through <a href="mailto:talk@projectfalcon.studio" class="highlighted-underlined">talk@projectfalcon.studio</a>
+        Contact us through <a href="mailto:talk@projectfalcon.studio" class="highlighted-underlined">talk@projectfalcon.studio</a>
       </p>
     </div>
   </div>

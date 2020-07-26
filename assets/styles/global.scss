@@ -109,7 +109,7 @@ button {
 
   @media (max-width: $mobile-breakpoint) {
     font-size: 2.5rem;
-    line-height: auto;
+    line-height: 100%;
   }
 }
 
@@ -142,6 +142,10 @@ button {
   font-weight: 400;
   font-size: 1rem;
   line-height: 150%;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-weight: 300;
+  }
 }
 
 .h6 {

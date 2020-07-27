@@ -13,9 +13,9 @@
         </h3>
 
         <div class="c-Header__container-info__actions">
-          <nuxt-link to="/work" tag="button" class="btn btn-primary btn-bold btn-rounded">
+          <button class="btn btn-primary btn-bold btn-rounded" @click="scrollToContacts">
             Get in touch
-          </nuxt-link>
+          </button>
 
           <nuxt-link to="/about" tag="button" class="btn btn-primary__fill btn-rounded">
             <span>
@@ -36,7 +36,11 @@
 
 <script>
 export default {
-
+  methods: {
+    scrollToContacts (e) {
+      document.querySelector('#contact-us').scrollIntoView()
+    }
+  }
 }
 </script>
 

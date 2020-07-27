@@ -194,7 +194,7 @@ export default {
     }
 
     .container {
-      padding: 4.25rem 0 0 0;
+      padding: 0;
       margin: 0 auto;
 
       .content {

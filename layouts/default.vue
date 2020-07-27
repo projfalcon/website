@@ -16,15 +16,6 @@ export default {
   components: {
     Navbar,
     Footer
-  },
-  mounted () {
-    // scroll to contact form on "Get in Touch" button click
-    document.querySelectorAll('nav .nav-content .links a.colored')
-      .forEach((button) => {
-        button.addEventListener('click', () => {
-          document.querySelector('#contact-us').scrollIntoView()
-        })
-      })
   }
 }
 </script>
@@ -43,9 +34,5 @@ body {
   margin: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
-
-  @media (max-width: 860px) {
-    overflow: auto;
-  }
 }
 </style>

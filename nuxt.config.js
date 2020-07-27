@@ -1,6 +1,13 @@
 
 export default {
   /*
+  ** Server configuration
+  */
+  server: {
+    host: '0.0.0.0',
+    port: 3000
+  },
+  /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
   */

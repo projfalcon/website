@@ -22,7 +22,7 @@
           Work
         </nuxt-link>
 
-        <nuxt-link to="#" tag="a" class="colored">
+        <nuxt-link to="#" tag="a" class="colored" @click.native="scrollToContacts">
           Get in touch
         </nuxt-link>
       </div>
@@ -65,7 +65,7 @@
                 Work
               </nuxt-link>
 
-              <a class="colored highlighted-underlined">
+              <a class="colored highlighted-underlined" @click="scrollToContacts">
                 Get in touch
               </a>
             </div>
@@ -84,8 +84,18 @@ export default {
     }
   },
   methods: {
+    scrollToContacts (e) {
+      if (this.Active) this.toggleDrawer()
+
+      setTimeout(() => {
+        document.querySelector('#contact-us').scrollIntoView()
+      }, 500)
+    },
     toggleDrawer () {
       this.Active = !this.Active
+
+      if (this.Active) document.querySelector('html').style.overflow = 'hidden'
+      else document.querySelector('html').style.overflow = 'auto'
     }
   }
 }
@@ -291,10 +301,13 @@ nav {
                 margin: 0;
 
                 a {
+                  display: block;
+                  max-width: max-content;
                   font-size: 1.375rem;
                   font-weight: 300;
                   line-height: 150%;
                   text-align: center;
+                  margin: 0 auto;
 
                   &:not(:last-of-type) {
                     margin-bottom: 2rem;

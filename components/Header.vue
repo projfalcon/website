@@ -202,5 +202,16 @@ export default {
       }
     }
   }
+
+  // iPhone 5/SE specific case
+  @media (max-width: 330px) and (max-height: 568px) {
+    &__container {
+      margin-top: 3.3125rem;
+
+      button {
+        padding: 0.875rem;
+      }
+    }
+  }
 }
 </style>

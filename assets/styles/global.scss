@@ -97,6 +97,10 @@ button {
       }
     }
   }
+
+  @media (max-width: 340px) {
+    padding: 0.875rem;
+  }
 }
 
 // HEADERS

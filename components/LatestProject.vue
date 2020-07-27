@@ -1,5 +1,5 @@
 <template>
-  <div id="latest-solution">
+  <div id="latest-solution" ref="container">
     <img id="background" src="~assets/media/misc/wave.svg">
 
     <div class="container">
@@ -39,7 +39,15 @@
 
 <script>
 export default {
+  mounted () {
+    window.addEventListener('resize', (ev) => {
+      if (window.innerHeight > 1024) {
+        const rem = (window.innerHeight - 1024) / 16
 
+        this.$refs.container.style.marginTop = `${3.06125 + rem}rem`
+      }
+    })
+  }
 }
 </script>
 

@@ -71,7 +71,7 @@ export default {
 #process {
   position: relative;
   margin: 13.4375rem auto 0 auto;
-  overflow-x: hidden;
+  overflow: hidden;
 
   img#ellipse {
     position: absolute;

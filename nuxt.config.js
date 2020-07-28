@@ -28,7 +28,19 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'High quality, blazing-fast solutions' },
       { name: 'msapplication-TileColor', content: '#da532c' },
-      { name: 'theme-color', content: '#ffffff' }
+      { name: 'theme-color', content: '#ffffff' },
+
+      { hid: 'ogType', name: 'og:type', content: 'website' },
+      { hid: 'ogUrl', name: 'og:url', content: 'https://projectfalcon.studio' },
+      { hid: 'ogTitle', name: 'og:title', content: 'Project Falcon' },
+      { hid: 'ogDescription', name: 'og:description', content: 'High quality, blazing-fast solutions' },
+      { hid: 'ogImg', name: 'og:image', content: '/logo-long.png' },
+      /* Twitter Tags */
+      { hid: 'twitterCard', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitterUrl', name: 'twitter:url', content: 'https://projectfalcon.studio' },
+      { hid: 'twitterTitle', name: 'twitter:title', content: 'Project Falcon' },
+      { hid: 'twitterDescription', name: 'twitter:description', content: 'High quality, blazing-fast solutions' },
+      { hid: 'twitterImage', name: 'twitter:image', content: '/logo-long.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

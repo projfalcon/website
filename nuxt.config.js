@@ -34,13 +34,13 @@ export default {
       { hid: 'ogUrl', name: 'og:url', content: 'https://projectfalcon.studio' },
       { hid: 'ogTitle', name: 'og:title', content: 'Project Falcon' },
       { hid: 'ogDescription', name: 'og:description', content: 'High quality, blazing-fast solutions' },
-      { hid: 'ogImg', name: 'og:image', content: '/logo-long.png' },
+      { hid: 'ogImg', name: 'og:image', content: '/logo-short.png' },
       /* Twitter Tags */
       { hid: 'twitterCard', name: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitterUrl', name: 'twitter:url', content: 'https://projectfalcon.studio' },
       { hid: 'twitterTitle', name: 'twitter:title', content: 'Project Falcon' },
       { hid: 'twitterDescription', name: 'twitter:description', content: 'High quality, blazing-fast solutions' },
-      { hid: 'twitterImage', name: 'twitter:image', content: '/logo-long.png' }
+      { hid: 'twitterImage', name: 'twitter:image', content: '/logo-short.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

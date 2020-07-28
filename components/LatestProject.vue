@@ -186,7 +186,7 @@ export default {
 
   // MOBILE
   @media (max-width: $mobile-breakpoint) {
-    margin: -18.5rem 0 7.5rem 0;
+    margin: -7.5rem 0 7.5rem 0;
 
     #background {
       max-height: unset;

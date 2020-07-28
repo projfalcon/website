@@ -38,7 +38,10 @@
 export default {
   methods: {
     scrollToContacts (e) {
-      document.querySelector('#contact-us').scrollIntoView()
+      const containerPosY = document.querySelector('#contact-us').offsetTop
+      const form = document.querySelector('#contact-us .container')
+
+      window.scrollTo(0, containerPosY + form.offsetTop)
     }
   }
 }

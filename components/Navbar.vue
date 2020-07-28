@@ -22,7 +22,7 @@
           Work
         </nuxt-link>
 
-        <nuxt-link to="#" tag="a" class="colored" @click.native="scrollToContacts">
+        <nuxt-link to="#" tag="a" class="colored" @click.native="scrollToContacts(false)">
           Get in touch
         </nuxt-link>
       </div>
@@ -65,7 +65,7 @@
                 Work
               </nuxt-link>
 
-              <a class="colored highlighted-underlined" @click="scrollToContacts">
+              <a class="colored highlighted-underlined" @click="scrollToContacts(true)">
                 Get in touch
               </a>
             </div>
@@ -84,12 +84,14 @@ export default {
     }
   },
   methods: {
-    scrollToContacts (e) {
+    scrollToContacts (delay) {
       if (this.Active) this.toggleDrawer()
 
-      setTimeout(() => {
-        document.querySelector('#contact-us').scrollIntoView()
-      }, 500)
+      if (delay) {
+        setTimeout(() => {
+          document.querySelector('#contact-us .container').scrollIntoView({ block: 'center' })
+        }, 500)
+      } else document.querySelector('#contact-us .container').scrollIntoView({ block: 'center' })
     },
     toggleDrawer () {
       this.Active = !this.Active

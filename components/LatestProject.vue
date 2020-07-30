@@ -61,7 +61,7 @@ export default {
     width: 100%;
     background: $lightgrey;
     padding: 6.375rem 0;
-    margin: -2.5rem auto 0 auto;
+    margin: -6.5rem auto 0 auto;
 
     .content {
       position: relative;
@@ -171,6 +171,10 @@ export default {
         }
       }
     }
+  }
+
+  @media (max-height: 860px) {
+    margin-top: 7.5rem;
   }
 
   // MOBILE

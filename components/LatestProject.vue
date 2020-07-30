@@ -1,7 +1,5 @@
 <template>
   <div id="latest-solution" ref="container">
-    <img id="background" src="~assets/media/misc/wave.svg">
-
     <div class="container">
       <div class="content">
         <div class="project-image">
@@ -29,10 +27,10 @@
           <nuxt-link id="read-more" to="" tag="h4" class="h4 link text-primary">
             Read More  →
           </nuxt-link>
-
-          <img id="square" src="~assets/media/misc/square.svg">
         </div>
       </div>
+
+      <img id="square" src="~assets/media/misc/square.svg">
     </div>
   </div>
 </template>
@@ -59,27 +57,17 @@ export default {
   display: flex;
   margin: 0rem 0 6rem 0;
 
-  #background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 0;
-    max-height: 56.25rem;
-    transform: translate(-50%, -58%);
-  }
-
   .container {
     width: 100%;
-    min-height: 22.5rem;
-    padding: 4rem 0;
-    // margin: 13.75rem auto 0 auto;
+    background: $lightgrey;
+    padding: 6.375rem 0;
     margin: -2.5rem auto 0 auto;
 
     .content {
       position: relative;
       display: grid;
-      grid-template-columns: minmax(0, 37.5rem) minmax(0, 1fr);
-      grid-gap: 0 8.5rem;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 21.875rem);
+      grid-gap: 0 7.75rem;
       margin: 0 auto;
 
       * {
@@ -91,19 +79,20 @@ export default {
 
         img {
           position: absolute;
-          top: -9.125rem;
           display: block;
           border-radius: 0.3125rem;
           box-shadow: 0 0 7.75rem 0 #00000010;
 
           &.desktop {
-            height: 25rem;
+            top: -8.25rem;
+            max-width: 39.6875rem;
           }
 
           &.mobile {
-            right: -4rem;
-            top: 4rem;
-            max-width: 14rem;
+            right: -3.75rem;
+            top: 3rem;
+            height: unset;
+            max-width: 14.375rem;
           }
         }
       }
@@ -125,25 +114,20 @@ export default {
           display: block;
           cursor: pointer;
         }
-
-        img#square {
-          position: absolute;
-          top: 100%;
-          right: -5rem;
-          z-index: 1;
-        }
       }
+    }
+
+    img#square {
+      position: absolute;
+      top: calc(100% - 3rem);
+      right: 6.5rem;
+      z-index: 1;
     }
   }
 
   @media (min-width: 1440px) {
     .content {
       max-width: 1100px;
-      grid-template-columns: 60% 40%;
-
-      .project-image img {
-        width: 100%;
-      }
     }
   }
 
@@ -152,10 +136,13 @@ export default {
 
     .container .content {
       max-width: 77%;
-      grid-template-columns: minmax(0, 36.75rem) minmax(0, 1fr);
 
-      .project-image img {
-        height: 20rem;
+      .project-image {
+        img {
+          &.desktop {
+            max-width: 100%;
+          }
+        }
       }
     }
   }
@@ -165,11 +152,11 @@ export default {
 
     .container .content {
       max-width: 90%;
-      grid-template-columns: minmax(0, 30em) minmax(0, 1fr);
-      grid-gap: 0 7.5rem;
 
       .project-image img {
-        max-width: 30rem;
+        &.mobile {
+          max-width: 12rem;
+        }
       }
     }
   }
@@ -177,16 +164,10 @@ export default {
   @media (max-width: 1080px) {
     .container .content {
       max-width: 90%;
-      grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
 
       .project-image img {
-        &.desktop {
-          height: unset;
-          max-width: 32rem;
-        }
-
         &.mobile {
-          top: 0;
+          max-width: 10rem;
         }
       }
     }
@@ -194,22 +175,15 @@ export default {
 
   // MOBILE
   @media (max-width: $mobile-breakpoint) {
-    margin: -7.5rem 0 7.5rem 0;
-    // margin: -18.5rem 0 7.5rem 0;
-
-    #background {
-      max-height: unset;
-      height: 85rem;
-      transform: translate(-50%, -35%);
-    }
+    margin: 7.5rem 0 7.5rem 0;
 
     .container {
-      padding: 0;
+      padding: 3rem 0;
       margin: 0 auto;
 
       .content {
         max-width: calc(100% - 4rem);
-        grid-template-rows: 40rem auto;
+        grid-template-rows: 15.625rem auto;
         grid-template-columns: 1fr;
         grid-gap: 0;
 
@@ -219,7 +193,6 @@ export default {
 
           img {
             display: block;
-            max-width: 20rem;
             width: auto;
             height: auto;
             margin: 0 auto;
@@ -229,8 +202,8 @@ export default {
               top: unset;
               bottom: 6rem;
               left: 0;
-              max-width: calc(100% - 1.5rem);
               height: unset;
+              max-width: calc(100% - 1.5rem);
               border-radius: 0.625rem;
               margin: 0;
             }
@@ -239,42 +212,35 @@ export default {
               top: unset;
               right: 0;
               bottom: 1rem;
-              max-width: 10rem;
               height: unset;
+              max-width: 10rem;
               border-radius: 0.625rem;
             }
           }
         }
+      }
 
-        .project-description {
-          img#square {
-            top: calc(100% + 3rem);
-            right: -2rem;
-            transform: translateX(50%);
-          }
-        }
+      img#square {
+        top: calc(100% - 3rem);
+        right: -4.5rem;
       }
     }
   }
 
   @media (max-width: $minimobile-breakpoint) {
-    #background {
-      height: 75rem;
-    }
-
     .container {
       .content {
-        grid-template-rows: 24rem auto;
+        grid-template-rows: 18rem auto;
 
         .project-image {
-          img.mobile {
-            max-width: 6rem;
-          }
-        }
+          img {
+            &.desktop {
+              max-width: 14rem;
+            }
 
-        .project-description {
-          img#square {
-            top: calc(100% + 1.5rem);
+            &.mobile {
+              max-width: 6rem;
+            }
           }
         }
       }

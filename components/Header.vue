@@ -1,7 +1,7 @@
 <template>
   <header class="c-Header">
-    <div class="c-Header__container">
-      <img class="c-Header__container-blob" src="~assets/media/misc/gradient-rounded-triangle.svg">
+    <div ref="container" class="c-Header__container">
+      <img ref="blob" class="c-Header__container-blob" src="~assets/media/misc/gradient-rounded-triangle.svg">
 
       <div class="c-Header__container-info">
         <h1 class="h1">
@@ -35,8 +35,39 @@
 </template>
 
 <script>
+import { getTranslateY } from '@/utils/css'
+
 export default {
+  mounted () {
+    this.positionBlob(false)
+
+    // position blob on window resize
+    window.addEventListener('resize', this.positionBlob)
+  },
   methods: {
+    positionBlob (diffMatters) {
+      if (window.innerWidth > 860) {
+        const blob = this.$refs.blob
+
+        if (blob) {
+          const container = this.$refs.container
+
+          const previousDistance = getTranslateY(blob.style.transform)
+          const newDistance = (container.offsetTop / blob.height) * 100
+          const minDistance = newDistance > 33
+
+          // calculate previous and new distance difference
+          const diff = Math.abs((Math.abs(newDistance) - Math.abs(previousDistance)) / previousDistance) * 100
+
+          const resize = (diffMatters && minDistance && previousDistance !== 0 && diff >= 2.5) ||
+            (diffMatters && previousDistance === 0) ||
+            !diffMatters
+
+          // if difference between distances is bigger than 5%, update it
+          if (resize) blob.style.transform = `translateX(-74%) translateY(-${newDistance}%)`
+        }
+      }
+    },
     scrollToContacts (e) {
       const containerPosY = document.querySelector('#contact-us').offsetTop
       const form = document.querySelector('#contact-us .container')
@@ -49,7 +80,10 @@ export default {
 
 <style lang="scss" scoped>
 .c-Header {
-  padding-top: 11.8125rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &__container {
     position: relative;
@@ -63,7 +97,7 @@ export default {
     &-blob {
       position: absolute;
       z-index: -100;
-      top: -19.25rem;
+      top: 0;
       left: 0;
       max-height: 62.5rem;
       display: block;
@@ -161,7 +195,8 @@ export default {
       align-items: center;
 
       &-blob {
-        transform: translateX(-74%) translateY(6rem);
+        // transform: translateX(-74%);
+        // transform: translateX(-56%);
       }
 
       &-info {

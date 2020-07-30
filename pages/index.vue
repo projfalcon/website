@@ -33,7 +33,7 @@ export default {
 <style lang="scss" scoped>
 .container {
   min-height: calc(100vh - 10.5rem);
-  margin-top: 6.625rem;
+  // margin-top: 6.625rem;
 
   @media (min-width: $mobile-breakpoint) {
     span.hr#what-we-do-perks-separator {

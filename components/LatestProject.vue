@@ -40,13 +40,13 @@
 <script>
 export default {
   mounted () {
-    window.addEventListener('resize', (ev) => {
-      if (window.innerHeight > 1024) {
-        const rem = (window.innerHeight - 1024) / 16
+    // window.addEventListener('resize', (ev) => {
+    // if (window.innerHeight > 1024) {
+    //   const rem = (window.innerHeight - 1024) / 16
 
-        this.$refs.container.style.marginTop = `${3.06125 + rem}rem`
-      }
-    })
+    //   this.$refs.container.style.marginTop = `${3.06125 + rem}rem`
+    // }
+    // })
   }
 }
 </script>
@@ -57,7 +57,7 @@ export default {
   width: 100%;
   min-height: 27.625rem;
   display: flex;
-  margin: 3.06125rem 0 6rem 0;
+  margin: 0rem 0 6rem 0;
 
   #background {
     position: absolute;
@@ -65,14 +65,15 @@ export default {
     left: 50%;
     z-index: 0;
     max-height: 56.25rem;
-    transform: translate(-50%, -38%);
+    transform: translate(-50%, -58%);
   }
 
   .container {
     width: 100%;
     min-height: 22.5rem;
     padding: 4rem 0;
-    margin: 13.75rem auto 0 auto;
+    // margin: 13.75rem auto 0 auto;
+    margin: -2.5rem auto 0 auto;
 
     .content {
       position: relative;
@@ -179,7 +180,14 @@ export default {
       grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
 
       .project-image img {
-        max-width: 30rem;
+        &.desktop {
+          height: unset;
+          max-width: 32rem;
+        }
+
+        &.mobile {
+          top: 0;
+        }
       }
     }
   }
@@ -187,10 +195,12 @@ export default {
   // MOBILE
   @media (max-width: $mobile-breakpoint) {
     margin: -7.5rem 0 7.5rem 0;
+    // margin: -18.5rem 0 7.5rem 0;
 
     #background {
       max-height: unset;
       height: 85rem;
+      transform: translate(-50%, -35%);
     }
 
     .container {

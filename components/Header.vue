@@ -87,7 +87,8 @@ export default {
 
         // If the blob should be repositioned, change translate values
         if (repositioned) this.BlobTransformArguments = `translateX(-74%) translateY(-${d}%)`
-      }
+      } else
+        this.BlobTransformArguments = 'translateX(-82.5%)'
     },
     repositionBlobOnResize () {
       this.positionBlob(true)

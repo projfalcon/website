@@ -13,7 +13,6 @@
 
 <script>
 import Header from '@/components/Header'
-
 import LatestProject from '@/components/LatestProject'
 import WhatWeDo from '@/components/WhatWeDo'
 import Perks from '@/components/Perks'
@@ -26,12 +25,6 @@ export default {
     WhatWeDo,
     Perks,
     Contact
-  },
-  mounted () {
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-      setTimeout(() => this.$nuxt.$loading.finish(), 50000)
-    })
   }
 }
 </script>

@@ -1,27 +1,27 @@
 $black: #1D1D1D;
 $grey: #808080;
-$lightgrey: linear-gradient(135deg,#E5E5E540, #F2F2F250);
-
-
+$lightgrey: linear-gradient(135deg,#E5E5E5, #F2F2F2);
+$white: #FFFFFF;
+$white2: #FAFAFA;
+$blue: linear-gradient(0deg, #2D7FF9, #98F9FF);
+$clearblue: linear-gradient(15deg, #C0D9FE, #ECF4FF);
+$clererblue: #F3F7FF;
+$red: #F82B60;
+$clearred: linear-gradient(135deg, #FEC6D5, #FFECF1);
+$yellow: #FFBF1C;
 $blue: #2D41F9;
-$rose-blue: #6C59FA;
-$rose: #DE85FD;
+$pink-blue: #6C59FA;
+$pink: #DE85FD;
 $dark-violet: #7F61FB;
 $light-violet: #9C6CFC;
+$bluepinkgradient: linear-gradient(135deg, #2D41F9, #DE85FD);
+$clearbluepinkgradient: linear-gradient(120deg, #EC008B30, #0AA6EB30);
+$clearerbluepinkgradient: linear-gradient(100deg, #FFC5FF, #E9FBFF);
 
-$primary: linear-gradient(135deg, $blue, $rose);
-$primary-dark: linear-gradient(135deg, darken($blue, 10), darken($rose, 10));
+$primary: $bluepinkgradient;
+$primary-dark: linear-gradient(135deg, darken(#2D41F9, 10), darken(#DE85FD, 10));
 
 $text-primary: $black;
 $text-secondary: $grey;
 
 $border-primary: $grey;
-
-
-.text-primary {
-  background: $primary;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-blend-mode: hard-light;
-  color: transparent;
-}

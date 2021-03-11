@@ -118,7 +118,7 @@ export default {
 
         span.highlighted {
           &:first-of-type {
-            color: $rose-blue;
+            color: $pink-blue;
           }
 
           &:last-of-type {

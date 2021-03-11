@@ -26,6 +26,12 @@ export default {
     WhatWeDo,
     Perks,
     Contact
+  },
+  mounted () {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 50000)
+    })
   }
 }
 </script>

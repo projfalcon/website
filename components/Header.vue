@@ -1,7 +1,7 @@
 <template>
   <header class="c-Header">
     <div ref="container" class="c-Header__container">
-      <img ref="blob" class="c-Header__container-blob" src="~assets/media/misc/gradient-rounded-triangle.svg">
+      <img ref="blob" :style="{ transform: BlobTransformArguments }" class="c-Header__container-blob" src="~assets/media/misc/gradient-rounded-triangle.svg">
 
       <div class="c-Header__container-info">
         <h1 class="h1">
@@ -38,36 +38,62 @@
 import { getTranslateY } from '@/utils/css'
 
 export default {
+  data () {
+    return {
+      BlobTransformArguments: 'translate(-100%, -100%)'
+    }
+  },
+  beforeMount () {
+    // Add resize event listeners
+    window.addEventListener('resize', this.repositionBlobOnResize)
+  },
+  beforeDestroy () {
+    // Remove resize event listeners
+    window.removeEventListener('resize', this.repositionBlobOnResize)
+  },
   mounted () {
     this.positionBlob(false)
-
-    // position blob on window resize
-    window.addEventListener('resize', this.positionBlob)
   },
   methods: {
     positionBlob (diffMatters) {
       if (window.innerWidth > 860) {
         const blob = this.$refs.blob
 
-        if (blob) {
-          const container = this.$refs.container
+        // If the blob hasn't loaded yet, re-run function in 500 ms
+        if (!blob || !blob.complete) {
+          setTimeout(() => {
+            this.positionBlob(true)
+          }, 500)
 
-          const previousDistance = getTranslateY(blob.style.transform)
-          const newDistance = (container.offsetTop / blob.height) * 100
-          const minDistance = newDistance > 33
-
-          // calculate previous and new distance difference
-          const diff = Math.abs((Math.abs(newDistance) - Math.abs(previousDistance)) / previousDistance) * 100
-
-          const resize = (diffMatters && minDistance && previousDistance !== 0 && diff >= 2.5) ||
-            (diffMatters && previousDistance === 0) ||
-            !diffMatters
-
-          // if difference between distances is bigger than 5%, update it
-          if (resize) blob.style.transform = `translateX(-74%) translateY(-${newDistance}%)`
+          return
         }
+
+        const container = this.$refs.container
+
+        // Get previous distance
+        const prevDistance = getTranslateY(blob.style.transform)
+
+        // Calculate new distance
+        const d = (container.offsetTop / blob.height) * 100
+        const dMeetsMinD = d > 33
+
+        // Calculate previous and new distance difference
+        const diff = Math.abs((Math.abs(d) - Math.abs(prevDistance)) / prevDistance) * 100
+
+        // Determine if the blob should be repositioned
+        const repositioned = (diffMatters && dMeetsMinD && prevDistance !== 0 && diff >= 2.5) ||
+          (diffMatters && prevDistance === -100) ||
+          !diffMatters
+
+        // If the blob should be repositioned, change translate values
+        if (repositioned) this.BlobTransformArguments = `translateX(-74%) translateY(-${d}%)`
       }
     },
+    repositionBlobOnResize () {
+      this.positionBlob(true)
+    },
+
+    // Scroll to contacts form
     scrollToContacts (e) {
       const containerPosY = document.querySelector('#contact-us').offsetTop
       const form = document.querySelector('#contact-us .container')
@@ -102,7 +128,8 @@ export default {
       max-height: 62.5rem;
       display: block;
       object-fit: cover;
-      transform: translateX(-74%);
+      transform: translate(-200%, -100%);
+      transition: all 1s ease;
     }
 
     &-info {

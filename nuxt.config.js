@@ -1,18 +1,21 @@
 
 export default {
   /*
+  ** Deploy configuration
+  */
+  target: 'static',
+  ssr: false,
+  generate: {
+    fallback: true
+  },
+
+  /*
   ** Server configuration
   */
   server: {
     host: '0.0.0.0',
     port: 3000
   },
-
-  /*
-  ** Nuxt target
-  ** See https://nuxtjs.org/api/configuration-target
-  */
-  target: 'static',
 
   /*
   ** Headers of the page
@@ -24,29 +27,45 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'High quality, blazing-fast solutions' },
-      { name: 'msapplication-TileColor', content: '#ffffff' },
-      { name: 'theme-color', content: '#ffffff' },
 
-      { hid: 'ogType', name: 'og:type', content: 'website' },
-      { hid: 'ogUrl', name: 'og:url', content: 'https://projectfalcon.studio' },
-      { hid: 'ogTitle', name: 'og:title', content: 'Project Falcon' },
-      { hid: 'ogDescription', name: 'og:description', content: 'High quality, blazing-fast solutions' },
+      // OG tags
+      { hid: 'ogType', name: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'ogSiteName', name: 'og:site_name', property: 'og:site_name', content: 'website' },
+      { hid: 'ogUrl', name: 'og:url', property: 'og:url', content: 'https://projectfalcon.studio' },
+      { hid: 'ogTitle', name: 'og:title', property: 'og:title', content: 'Project Falcon' },
+      { hid: 'ogDescription', name: 'og:description', property: 'og:description', content: 'High quality, blazing-fast solutions' },
       { hid: 'ogImg', name: 'og:image', content: '/logo-short.png' },
+
       /* Twitter Tags */
-      { hid: 'twitterCard', name: 'twitter:card', content: 'summary_large_image' },
-      { hid: 'twitterUrl', name: 'twitter:url', content: 'https://projectfalcon.studio' },
-      { hid: 'twitterTitle', name: 'twitter:title', content: 'Project Falcon' },
-      { hid: 'twitterDescription', name: 'twitter:description', content: 'High quality, blazing-fast solutions' },
-      { hid: 'twitterImage', name: 'twitter:image', content: '/logo-short.png' }
+      { hid: 'twitterCard', name: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitterUrl', name: 'twitter:url', property: 'twitter:url', content: 'https://projectfalcon.studio' },
+      { hid: 'twitterTitle', name: 'twitter:title', property: 'twitter:title', content: 'Project Falcon' },
+      { hid: 'twitterDescription', name: 'twitter:description', property: 'twitter:description', content: 'High quality, blazing-fast solutions' },
+      { hid: 'twitterImage', name: 'twitter:image', property: 'twitter:image', content: '/logo-short.png' },
+
+      // PWA
+      { name: 'msapplication-TileColor', content: '#ffffff' },
+      { name: 'theme-color', content: '#ffffff' }
     ],
     link: [
+      // Manifest
+      { rel: 'manifest', href: '/manifest.json' },
+
+      // Favicons & PWA Icons
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-      { rel: 'manifest', href: '/manifest.json' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       { rel: 'mask-icon', color: '#ffffff', href: '/safari-pinned-tab.svg' }
     ]
+  },
+  pwa: {
+    meta: {
+      name: 'Project Falcon',
+      author: 'Project Falcon',
+      description: 'High quality, blazing-fast solutions',
+      appleStatusBarStyle: 'black-translucent'
+    }
   },
 
   /*
@@ -54,9 +73,14 @@ export default {
   */
   loadingIndicator: {
     name: 'circle',
-    color: '#3B8070',
+    color: '#2d41f9',
     background: 'white'
   },
+
+  /*
+  ** Loading bar
+  */
+  loading: {},
 
   /*
   ** Global CSS

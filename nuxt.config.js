@@ -7,16 +7,13 @@ export default {
     host: '0.0.0.0',
     port: 3000
   },
-  /*
-  ** Nuxt rendering mode
-  ** See https://nuxtjs.org/api/configuration-mode
-  */
-  mode: 'universal',
+
   /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
   */
   target: 'static',
+
   /*
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
@@ -60,12 +57,14 @@ export default {
     color: '#3B8070',
     background: 'white'
   },
+
   /*
   ** Global CSS
   */
   css: [],
-  /**
-   * Style Resources 
+
+  /*
+  ** Style Resources
   **/
   styleResources: {
     scss: [
@@ -74,17 +73,20 @@ export default {
       './assets/fonts/fonts.scss'
     ]
   },
+
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
   ],
+
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components
   */
   components: true,
+
   /*
   ** Nuxt.js dev-modules
   */
@@ -94,6 +96,7 @@ export default {
 
     '@nuxtjs/style-resources'
   ],
+
   /*
   ** Nuxt.js modules
   */
@@ -104,16 +107,19 @@ export default {
     // Doc: https://github.com/nuxt/content
     '@nuxt/content'
   ],
+
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {},
+
   /*
   ** Content module configuration
   ** See https://content.nuxtjs.org/configuration
   */
   content: {},
+
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/

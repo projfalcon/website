@@ -24,7 +24,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'High quality, blazing-fast solutions' },
-      { name: 'msapplication-TileColor', content: '#da532c' },
+      { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'theme-color', content: '#ffffff' },
 
       { hid: 'ogType', name: 'og:type', content: 'website' },
@@ -45,7 +45,7 @@ export default {
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
       { rel: 'manifest', href: '/manifest.json' },
-      { rel: 'mask-icon', color: '#2d7ff9', href: '/safari-pinned-tab.svg' }
+      { rel: 'mask-icon', color: '#ffffff', href: '/safari-pinned-tab.svg' }
     ]
   },
 

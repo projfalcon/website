@@ -1,3 +1,5 @@
+// load .env files
+require('dotenv').config()
 
 export default {
   /*
@@ -81,6 +83,16 @@ export default {
   ** Loading bar
   */
   loading: {},
+
+  /*
+  ** Environment variables
+  */
+  env: {
+    development: process.env.DEVELOPMENT === 'true',
+
+    socialInstagramURL: process.env.SOCIAL_INSTAGRAM_URL,
+    socialFacebookURL: process.env.SOCIAL_FACEBOOK_URL
+  },
 
   /*
   ** Global CSS

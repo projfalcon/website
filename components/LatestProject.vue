@@ -24,7 +24,7 @@
             an app we are here.
           </h5>
 
-          <nuxt-link id="read-more" to="" tag="h4" class="h4 link text-primary">
+          <nuxt-link id="read-more" to="" tag="h4" class="h4 text-primary link link-slide-right">
             Read More  →
           </nuxt-link>
         </div>

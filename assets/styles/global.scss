@@ -191,10 +191,13 @@ button {
 }
 
 .link {
+  cursor: pointer;
   transition: 0.3s ease all;
 
-  &:hover {
-    transform: translateX(10px);
+  &.link-slide-right {
+    &:hover {
+      transform: translateX(10px);
+    }
   }
 }
 

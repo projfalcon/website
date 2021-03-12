@@ -6,19 +6,19 @@
       </nuxt-link>
 
       <div class="links">
-        <nuxt-link id="home-link" to="/" tag="a">
+        <nuxt-link id="home-link" to="/" tag="a" class="text-primary-on-hover">
           Home
         </nuxt-link>
 
-        <nuxt-link id="about-link" to="about" tag="a">
+        <nuxt-link id="about-link" to="about" tag="a" class="text-primary-on-hover">
           About
         </nuxt-link>
 
-        <nuxt-link id="team-link" to="team" tag="a">
+        <nuxt-link id="team-link" to="team" tag="a" class="text-primary-on-hover">
           Team
         </nuxt-link>
 
-        <nuxt-link id="work-link" to="work" tag="a">
+        <nuxt-link id="work-link" to="work" tag="a" class="text-primary-on-hover">
           Work
         </nuxt-link>
 
@@ -49,19 +49,19 @@
             </div>
 
             <div class="links">
-              <nuxt-link id="home-link" to="/" tag="a">
+              <nuxt-link id="home-link" to="/" tag="a" class="text-primary-on-hover">
                 Home
               </nuxt-link>
 
-              <nuxt-link id="about-link" to="about" tag="a">
+              <nuxt-link id="about-link" to="about" tag="a" class="text-primary-on-hover">
                 About
               </nuxt-link>
 
-              <nuxt-link id="team-link" to="team" tag="a">
+              <nuxt-link id="team-link" to="team" tag="a" class="text-primary-on-hover">
                 Team
               </nuxt-link>
 
-              <nuxt-link id="work-link" to="work" tag="a">
+              <nuxt-link id="work-link" to="work" tag="a" class="text-primary-on-hover">
                 Work
               </nuxt-link>
 

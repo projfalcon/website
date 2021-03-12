@@ -19,7 +19,7 @@
           We code depending on your needs.
         </h5>
 
-        <nuxt-link to="/" tag="h4" class="h4 link text-primary">
+        <nuxt-link to="/" tag="h4" class="h4 text-primary link link-slide-right">
           Read More  →
         </nuxt-link>
       </div>
@@ -36,7 +36,7 @@
           before commiting.
         </h5>
 
-        <nuxt-link to="/" tag="h4" class="h4 link text-primary">
+        <nuxt-link to="/" tag="h4" class="h4 text-primary link link-slide-right">
           Read More  →
         </nuxt-link>
       </div>
@@ -53,7 +53,7 @@
           for you to help decide what’s best.
         </h5>
 
-        <nuxt-link to="/" tag="h4" class="h4 link text-primary">
+        <nuxt-link to="/" tag="h4" class="h4 text-primary link link-slide-right">
           Read More  →
         </nuxt-link>
       </div>

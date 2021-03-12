@@ -42,11 +42,11 @@
       </div>
 
       <div class="legal-links">
-        <nuxt-link to="#" tag="h6" class="h6">
+        <nuxt-link to="#" tag="h6" class="h6 text-primary-on-hover link">
           Terms & Conditions
         </nuxt-link>
 
-        <nuxt-link to="#" tag="h6" class="h6">
+        <nuxt-link to="#" tag="h6" class="h6 text-primary-on-hover link">
           Privacy Policy
         </nuxt-link>
       </div>
@@ -183,7 +183,7 @@ footer {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-gap: 0 1.25rem;
-        padding-top: 2.125rem;
+        padding-top: 1.5rem;
 
         .logo {
           grid-area: unset;

@@ -22,6 +22,20 @@ main {
   -webkit-background-clip: text;
   background-blend-mode: hard-light;
   color: transparent;
+  transition: 0.3s ease all;
+}
+
+.text-primary-on-hover {
+  background: $primary;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-blend-mode: hard-light;
+  color: inherit;
+  transition: 0.3s ease all;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0) !important;
+  }
 }
 
 // Buttons

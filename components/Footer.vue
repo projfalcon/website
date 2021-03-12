@@ -10,11 +10,11 @@
           {{ Year }} © Falcon Project. All rights reserved
         </h6>
 
-        <nuxt-link to="#" tag="h6" class="h6">
+        <nuxt-link to="#" tag="h6" class="h6 text-primary-on-hover link">
           Terms & Conditions
         </nuxt-link>
 
-        <nuxt-link to="#" tag="h6" class="h6">
+        <nuxt-link to="#" tag="h6" class="h6 text-primary-on-hover link">
           Privacy Policy
         </nuxt-link>
       </div>
@@ -120,10 +120,6 @@ footer {
 
         &:not(:last-of-type) {
           margin-right: 2rem;
-        }
-
-        &:hover {
-          color: $blue;
         }
       }
     }

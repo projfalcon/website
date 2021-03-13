@@ -19,6 +19,7 @@ $clearbluepinkgradient: linear-gradient(120deg, #EC008B30, #0AA6EB30);
 $clearerbluepinkgradient: linear-gradient(100deg, #FFC5FF, #E9FBFF);
 
 $primary: $bluepinkgradient;
+$primary-light: linear-gradient(135deg, lighten(#2D41F9, 10), lighten(#DE85FD, 10));
 $primary-dark: linear-gradient(135deg, darken(#2D41F9, 10), darken(#DE85FD, 10));
 
 $text-primary: $black;

@@ -44,7 +44,7 @@
           <img src="~assets/media/illustrations/what-we-do/thinking.svg">
 
           <h2 class="h2 title">
-            Thinking
+            Think & Plan
           </h2>
 
           <h5 class="h5 description">

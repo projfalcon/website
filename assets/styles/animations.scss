@@ -1,0 +1,46 @@
+/* Slide animations */
+.slide-left-enter-right {
+  animation: slideLeftEnterRight 0.5s ease forwards;
+  transition: 0.5s ease all;
+}
+
+@keyframes slideLeftEnterRight {
+  50% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  51% {
+    display: none;
+  }
+  52% {
+    display: block;
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.slide-right-enter-left {
+  animation: slideRightEnterLeft 0.5s ease forwards;
+  transition: 0.5s ease all;
+}
+
+@keyframes slideRightEnterLeft {
+  50% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  51% {
+    display: none;
+  }
+  52% {
+    display: block;
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}

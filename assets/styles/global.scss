@@ -154,7 +154,7 @@ button {
         height: 0.125rem;
         background: $primary;
         transform: translate(-50%, 0);
-        transition: 0.3s ease all;
+        transition: 0.3s ease-out all;
       }
     }
   }

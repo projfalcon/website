@@ -3,7 +3,7 @@
     <img id="triangle-illustration" src="~assets/media/misc/triangle.svg">
 
     <div class="container">
-      <div class="title">
+      <div class="title title-with-top-badge">
         <h1 class="h1">
           What <span>we do</span>
         </h1>
@@ -104,36 +104,6 @@ export default {
       justify-content: center;
       align-items: center;
       margin-bottom: 8.125rem;
-
-      h1 {
-        max-width: var(--max-width);
-        position: relative;
-        text-align: center;
-
-        span {
-          position: relative;
-          white-space: nowrap;
-
-          &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 3rem;
-            height: 0.3125rem;
-            background: $primary;
-            border-radius: 0.5rem;
-            transform: translate(-50%, -3rem);
-          }
-        }
-      }
-
-      h3 {
-        max-width: 22.5rem;
-        color: $grey;
-        text-align: center;
-        margin-top: 1.25rem;
-      }
     }
 
     .items {

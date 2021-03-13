@@ -106,6 +106,7 @@ export default {
     scss: [
       './assets/styles/colors.scss',
       './assets/styles/global.scss',
+      './assets/styles/animations.scss',
       './assets/fonts/fonts.scss'
     ]
   },

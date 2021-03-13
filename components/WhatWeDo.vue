@@ -5,7 +5,9 @@
     <div class="container">
       <div class="title title-with-top-badge">
         <h1 class="h1">
-          What <span>we do</span>
+          What we do
+
+          <span />
         </h1>
 
         <h3 class="h3">
@@ -99,10 +101,6 @@ export default {
 
     .title {
       grid-column: 1 / 4;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       margin-bottom: 8.125rem;
     }
 

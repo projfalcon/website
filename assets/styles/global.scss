@@ -126,6 +126,40 @@ button {
   }
 }
 
+// Full width button
+.btn-full-width-line-container {
+  position: relative;
+  z-index: 10;
+
+  button {
+    &:hover ~ span.line:after {
+      width: 100vw;
+    }
+
+    ~ span.line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100vw;
+      height: 0.125rem;
+      background: $lightgrey;
+      transform: translate(0, -50%);
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 0;
+        height: 0.125rem;
+        background: $primary;
+        transform: translate(-50%, 0);
+        transition: 0.3s ease all;
+      }
+    }
+  }
+}
+
 // Headers and typography
 .h1 {
   font-family: "Montserrat";

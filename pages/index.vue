@@ -6,7 +6,7 @@
 
     <span id="what-we-do-perks-separator" class="hr" />
 
-    <Perks />
+    <Testimonials />
     <Contact />
   </div>
 </template>
@@ -15,7 +15,7 @@
 import Header from '@/components/Header'
 import LatestProject from '@/components/LatestProject'
 import WhatWeDo from '@/components/WhatWeDo'
-import Perks from '@/components/Perks'
+import Testimonials from '@/components/Lists/Testimonials'
 import Contact from '@/components/Contact'
 
 export default {
@@ -23,7 +23,7 @@ export default {
     Header,
     LatestProject,
     WhatWeDo,
-    Perks,
+    Testimonials,
     Contact
   }
 }
@@ -34,13 +34,13 @@ export default {
   min-height: calc(100vh - 10.5rem);
   // margin-top: 6.625rem;
 
-  @media (min-width: $mobile-breakpoint) {
+  @media (min-width: $large-mobile-breakpoint) {
     span.hr#what-we-do-perks-separator {
       display: none;
     }
   }
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (max-width: $large-mobile-breakpoint) {
     margin-top: 0;
   }
 }

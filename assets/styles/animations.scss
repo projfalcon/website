@@ -1,46 +1,44 @@
 /* Slide animations */
 .slide-left-enter-right {
-  animation: slideLeftEnterRight 0.5s ease forwards;
-  transition: 0.5s ease all;
+  animation: slideLeftEnterRight 1s ease forwards;
 }
 
 @keyframes slideLeftEnterRight {
   50% {
-    transform: translateX(-100%);
     opacity: 0;
+    transform: translateX(-25%);
   }
   51% {
     display: none;
+    transform: translateX(25%);
   }
   52% {
     display: block;
-    transform: translateX(100%);
   }
-  to {
-    transform: translateX(0%);
+  100% {
     opacity: 1;
+    transform: translateX(0%);
   }
 }
 
 .slide-right-enter-left {
-  animation: slideRightEnterLeft 0.5s ease forwards;
-  transition: 0.5s ease all;
+  animation: slideRightEnterLeft 1s ease forwards;
 }
 
 @keyframes slideRightEnterLeft {
   50% {
-    transform: translateX(100%);
     opacity: 0;
+    transform: translateX(25%);
   }
   51% {
     display: none;
+    transform: translateX(-25%);
   }
   52% {
     display: block;
-    transform: translateX(-100%);
   }
-  to {
-    transform: translateX(0%);
+  100% {
     opacity: 1;
+    transform: translateX(0%);
   }
 }

@@ -50,6 +50,16 @@
           <span class="line" />
         </div>
       </div>
+
+      <div class="navigation-dots">
+        <span
+          v-for="(dot, index) in List.length"
+          :key="index"
+          :class="{ active: index === CurrentIndex && CurrentIndexDisplayed }"
+          class="item"
+          @click="goToItem(index)"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -78,6 +88,7 @@ export default {
         }
       ],
       CurrentIndex: 0,
+      CurrentIndexDisplayed: true,
       BrowseToPrevious: false,
       BrowseToNext: false
     }
@@ -88,8 +99,24 @@ export default {
       if (this.BrowseToPrevious) return
 
       this.BrowseToPrevious = true
+      this.CurrentIndexDisplayed = false
       setTimeout(() => {
-        this.CurrentIndex--
+        this.setIndex(this.CurrentIndex - 1)
+      }, 500)
+    },
+    goToItem (item) {
+      if (item === this.CurrentIndex) return
+      if (this.BrowseToPrevious || this.BrowseToNext) return
+
+      if (item < this.CurrentIndex)
+        this.BrowseToPrevious = true
+      else
+        this.BrowseToNext = true
+
+      this.CurrentIndexDisplayed = false
+
+      setTimeout(() => {
+        this.setIndex(item)
       }, 500)
     },
     goToNext () {
@@ -97,9 +124,15 @@ export default {
       if (this.BrowseToNext) return
 
       this.BrowseToNext = true
+      this.CurrentIndexDisplayed = false
       setTimeout(() => {
-        this.CurrentIndex++
+        this.setIndex(this.CurrentIndex + 1)
       }, 500)
+    },
+
+    setIndex (index) {
+      this.CurrentIndex = index
+      this.CurrentIndexDisplayed = true
     },
     resetBrowsingStatus () {
       this.BrowseToPrevious = false
@@ -179,6 +212,36 @@ export default {
         top: -2.5rem;
         left: -4rem;
         z-index: -1;
+      }
+    }
+  }
+
+  .navigation-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.5rem;
+
+    .item {
+      display: block;
+      width: 0.625rem;
+      height: 0.625rem;
+      background: lighten($grey, 40);
+      border-radius: 0.3125rem;
+      transition: 0.3s ease all;
+
+      &:not(:last-of-type) {
+        margin-right: 1.625rem;
+      }
+
+      &:not(.active):hover {
+        background: lighten($grey, 0);
+        cursor: pointer;
+      }
+
+      &.active {
+        width: 1.125rem;
+        background: $primary;
       }
     }
   }

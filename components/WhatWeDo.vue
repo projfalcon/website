@@ -77,7 +77,6 @@
       <div
         class="call-to-action"
         data-aos="fade"
-        data-aos-delay="1000"
       >
         <div class="btn-full-width-line-container">
           <button class="btn btn-primary btn-bold btn-rounded">

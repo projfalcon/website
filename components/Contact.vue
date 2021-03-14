@@ -2,9 +2,12 @@
   <div id="contact-us">
     <img id="blob" src="~assets/media/misc/gradient-blob.svg">
 
-    <div class="container">
+    <div
+      class="container"
+      data-aos="fade-up"
+    >
       <h1 class="h1 title">
-        Contact us!
+        Talk to us
       </h1>
 
       <div id="form">

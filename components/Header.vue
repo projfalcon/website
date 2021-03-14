@@ -3,7 +3,10 @@
     <div ref="container" class="c-Header__container">
       <img ref="blob" :style="{ transform: BlobTransformArguments }" class="c-Header__container-blob" src="~assets/media/misc/gradient-rounded-triangle.svg">
 
-      <div class="c-Header__container-info">
+      <div
+        class="c-Header__container-info"
+        data-aos="fade-up"
+      >
         <h1 class="h1">
           High-<span class="highlighted">quality,</span> blazing-<span class="highlighted">fast.</span>
         </h1>
@@ -27,7 +30,10 @@
         <img class="c-Header__container-info__ellipse" src="~assets/media/misc/ellipse.svg">
       </div>
 
-      <div class="c-Header__container-animation">
+      <div
+        class="c-Header__container-animation"
+        data-aos="fade-left"
+      >
         <img src="~assets/media/illustrations/header-people.svg">
       </div>
     </div>

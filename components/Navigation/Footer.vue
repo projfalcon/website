@@ -171,7 +171,7 @@ footer {
     }
 
     // MOBILE
-    @media (max-width: $mobile-breakpoint) {
+    @media (max-width: $large-mobile-breakpoint) {
       grid-gap: 1.25rem 0;
 
       &.container-desktop {

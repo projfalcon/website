@@ -61,7 +61,7 @@ export default {
     background-blend-mode: hard light;
     transform: translateX(-50%);
 
-    @media (max-width: $mobile-breakpoint) {
+    @media (max-width: $large-mobile-breakpoint) {
       top: -2.5rem;
       max-width: 18.5rem;
       transform: translateX(-55%);
@@ -109,7 +109,7 @@ export default {
       }
     }
 
-    @media (max-width: $mobile-breakpoint) {
+    @media (max-width: $large-mobile-breakpoint) {
       max-width: calc(100% - 4rem);
 
       #form #submit {
@@ -123,7 +123,7 @@ export default {
       }
     }
 
-    @media (max-width: $minimobile-breakpoint) {
+    @media (max-width: $mini-mobile-breakpoint) {
       #form {
         grid-template-columns: minmax(0, 1fr);
 

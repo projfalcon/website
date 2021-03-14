@@ -1,6 +1,13 @@
 // BREAKPOINTS
-$mobile-breakpoint: 860px;
-$minimobile-breakpoint: 360px;
+$large-laptop-breakpoint: 1440px;
+$laptop-breakpoint: 1366px;
+$middle-laptop-breakpoint: 1280px;
+$small-laptop-breakpoint: 1080px;
+
+$large-mobile-breakpoint: 860px;
+$mobile-breakpoint: 768px;
+$middle-mobile-breakpoint: 640px;
+$mini-mobile-breakpoint: 360px;
 
 *,
 *::before,
@@ -168,7 +175,7 @@ button {
   font-size: 3rem;
   line-height: 3.75rem;
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (max-width: $large-mobile-breakpoint) {
     font-size: 2.5rem;
     line-height: 100%;
   }
@@ -204,7 +211,7 @@ button {
   font-size: 1rem;
   line-height: 150%;
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (max-width: $large-mobile-breakpoint) {
     font-weight: 300;
   }
 }

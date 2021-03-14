@@ -107,7 +107,7 @@ export default {
     z-index: -1;
 
     // MOBILE
-    @media (max-width: $mobile-breakpoint) {
+    @media (max-width: $large-mobile-breakpoint) {
       bottom: 12.5rem;
       height: 6rem;
       transform: translateX(-60%);
@@ -181,7 +181,7 @@ export default {
     }
 
     // MOBILE
-    @media (max-width: $mobile-breakpoint) {
+    @media (max-width: $large-mobile-breakpoint) {
       --max-width: calc(100% - 4rem);
       grid-template-columns: 1fr;
       grid-gap: 0;
@@ -213,7 +213,7 @@ export default {
     }
   }
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (max-width: $large-mobile-breakpoint) {
     margin-bottom: 5.4375rem;
   }
 }

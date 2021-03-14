@@ -228,7 +228,7 @@ export default {
   }
 
   // MOBILE
-  @media (max-width: $mobile-breakpoint) {
+  @media (max-width: $large-mobile-breakpoint) {
     height: 100vh;
     padding-top: 0;
     // transform: translateY(-6.625rem);
@@ -276,7 +276,7 @@ export default {
     }
   }
 
-  @media (max-width: $minimobile-breakpoint) {
+  @media (max-width: $mini-mobile-breakpoint) {
     &__container {
       &-info {
         &__actions {

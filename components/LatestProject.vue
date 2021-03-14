@@ -184,7 +184,7 @@ export default {
   }
 
   // MOBILE
-  @media (max-width: $mobile-breakpoint) {
+  @media (max-width: $large-mobile-breakpoint) {
     margin: 7.5rem 0 7.5rem 0;
 
     .container {
@@ -237,7 +237,7 @@ export default {
     }
   }
 
-  @media (max-width: $minimobile-breakpoint) {
+  @media (max-width: $mini-mobile-breakpoint) {
     .container {
       .content {
         grid-template-rows: 18rem auto;

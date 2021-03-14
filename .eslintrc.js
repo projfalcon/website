@@ -14,6 +14,7 @@ module.exports = {
   plugins: [
   ],
   rules: {
-    curly: ["error", "multi-or-nest"]
+    curly: ['error', 'multi-or-nest'],
+    'new-cap': 0
   }
 }

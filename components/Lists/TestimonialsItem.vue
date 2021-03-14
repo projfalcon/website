@@ -72,7 +72,6 @@ export default {
   max-width: 50rem;
   display: grid;
   grid-template-columns: 12.5rem auto;
-  grid-template-areas: "photo description";
 
   .photo {
     max-width: 12.5rem;
@@ -92,9 +91,15 @@ export default {
   }
 
   .description {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "review"
+                        "name"
+                        "role";
     margin-left: 2.5rem;
 
     .review {
+      grid-area: review;
       position: relative;
       color: $grey;
       margin-bottom: 1.875rem;
@@ -121,6 +126,7 @@ export default {
     }
 
     .name {
+      grid-area: name;
       max-width: max-content;
       font-family: "Montserrat";
       font-weight: 700;
@@ -128,9 +134,38 @@ export default {
     }
 
     .role {
+      grid-area: role;
       color: $grey;
       font-size: 0.75rem;
       margin-top: 0.25rem;
+    }
+  }
+
+  @media (max-width: $large-mobile-breakpoint) {
+    grid-template-columns: minmax(0, 1fr);
+
+    .photo {
+      margin: 0 auto 3rem auto;
+    }
+
+    .description {
+      grid-template-areas: "name"
+                          "role"
+                          "review";
+      justify-content: center;
+      margin: 0;
+
+      .name {
+        margin: 0 auto;
+      }
+
+      .role {
+        margin: 0 auto;
+      }
+
+      .review {
+        margin: 3rem 0 0 0;
+      }
     }
   }
 }

@@ -149,6 +149,11 @@ export default {
   position: relative;
   margin: 11.25rem auto 0 auto;
 
+  .title {
+    position: relative;
+    z-index: 10;
+  }
+
   .items {
     width: 100%;
     display: grid;
@@ -303,6 +308,36 @@ export default {
       .go-to-previous {
         padding-right: 3rem;
       }
+    }
+  }
+
+  @media (max-width: $large-mobile-breakpoint) {
+    .container {
+      --max-width: calc(100% - 4rem);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .items {
+      max-width: var(--max-width);
+      grid-template-columns: minmax(0, 1fr);
+      margin: 5.625rem auto 0 auto;
+
+      .go-to-previous,
+      .go-to-next {
+        display: none;
+      }
+
+      .current {
+        .circle-blob {
+          left: 50%;
+          transform: translateX(calc(-50% - 4.5rem));
+        }
+      }
+    }
+
+    .navigation-dots {
+      margin-top: 4.5rem;
     }
   }
 }

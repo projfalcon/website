@@ -116,6 +116,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    { src: '~/plugins/aos', ssr: false }
   ],
 
   /*

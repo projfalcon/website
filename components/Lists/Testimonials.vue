@@ -20,6 +20,7 @@
         <div class="go-to-previous">
           <span class="line" />
           <span :class="{ disabled: CurrentIndex === 0 }" class="arrow-container" @click="goToPrevious">
+            <span class="background" />
             <i class="material-icons-round">
               keyboard_arrow_left
             </i>
@@ -43,6 +44,7 @@
 
         <div class="go-to-next">
           <span :class="{ disabled: CurrentIndex === List.length - 1 }" class="arrow-container" @click="goToNext">
+            <span class="background" />
             <i class="material-icons-round">
               keyboard_arrow_right
             </i>
@@ -183,15 +185,37 @@ export default {
         transition: 0.3s ease all;
 
         &:not(.disabled):hover {
-          background: $primary;
           border: none;
           color: #fff;
           cursor: pointer;
+
+          .background {
+            opacity: 1;
+          }
         }
 
         &.disabled {
           opacity: 0.2;
           cursor: not-allowed;
+        }
+
+        .background {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 9;
+          display: block;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          background: $primary;
+          border-radius: 50%;
+          transition: 0.3s ease opacity;
+        }
+
+        i {
+          position: relative;
+          z-index: 10;
         }
       }
     }

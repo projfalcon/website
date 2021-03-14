@@ -3,7 +3,10 @@
     <img id="triangle-illustration" src="~assets/media/misc/triangle.svg">
 
     <div class="container">
-      <div class="title title-with-top-badge">
+      <div
+        class="title title-with-top-badge"
+        data-aos="fade-up"
+      >
         <h1 class="h1">
           What we do
 
@@ -16,7 +19,12 @@
       </div>
 
       <div class="items">
-        <div id="develop" class="item">
+        <div
+          id="develop"
+          class="item"
+          data-aos="fade-up"
+          data-aos-delay="250"
+        >
           <img src="~assets/media/illustrations/what-we-do/development.svg">
 
           <h2 class="h2 title">
@@ -29,7 +37,12 @@
           </h5>
         </div>
 
-        <div id="design" class="item">
+        <div
+          id="design"
+          class="item"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
           <img src="~assets/media/illustrations/what-we-do/design.svg">
 
           <h2 class="h2 title">
@@ -42,7 +55,12 @@
           </h5>
         </div>
 
-        <div id="thinking" class="item">
+        <div
+          id="thinking"
+          class="item"
+          data-aos="fade-up"
+          data-aos-delay="750"
+        >
           <img src="~assets/media/illustrations/what-we-do/thinking.svg">
 
           <h2 class="h2 title">
@@ -56,7 +74,11 @@
         </div>
       </div>
 
-      <div class="call-to-action">
+      <div
+        class="call-to-action"
+        data-aos="fade"
+        data-aos-delay="1000"
+      >
         <div class="btn-full-width-line-container">
           <button class="btn btn-primary btn-bold btn-rounded">
             Learn More

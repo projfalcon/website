@@ -2,21 +2,36 @@
   <div id="latest-solution" ref="container">
     <div class="container">
       <div class="content">
-        <div class="project-image">
-          <img class="desktop" src="~assets/media/projects/drfarma/drfarma.svg">
-          <img class="mobile" src="~assets/media/projects/drfarma/drfarma-mobile.svg">
+        <div
+          class="project-image"
+          data-aos="fade-right"
+        >
+          <img
+            src="~assets/media/projects/drfarma/drfarma.svg"
+            class="desktop"
+          >
+          <img
+            src="~assets/media/projects/drfarma/drfarma-mobile.svg"
+            class="mobile"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
         </div>
 
-        <div class="project-description">
+        <div
+          class="project-description"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
           <p class="subtitle text-primary">
             LATEST SOLUTION
           </p>
 
-          <h2 id="project-title" class="h2">
+          <h2 class="h2 project-title">
             Pharmacy <br>E-Commerce
           </h2>
 
-          <h5 id="project-long__description" class="h5">
+          <h5 class="h5 project-long__description">
             Whether you need a E-Commerce, a landing page or an app
             we are here for you to help decide what’s best. Whether
             you need a E-Commerce, a landing page or an app we are
@@ -24,7 +39,7 @@
             an app we are here.
           </h5>
 
-          <nuxt-link id="read-more" to="" tag="h4" class="h4 text-primary link link-slide-right">
+          <nuxt-link to="" tag="h4" class="h4 text-primary link link-slide-right read-more">
             Read More  →
           </nuxt-link>
         </div>
@@ -37,15 +52,6 @@
 
 <script>
 export default {
-  mounted () {
-    // window.addEventListener('resize', (ev) => {
-    // if (window.innerHeight > 1024) {
-    //   const rem = (window.innerHeight - 1024) / 16
-
-    //   this.$refs.container.style.marginTop = `${3.06125 + rem}rem`
-    // }
-    // })
-  }
 }
 </script>
 
@@ -100,17 +106,17 @@ export default {
       .project-description {
         position: relative;
 
-        h2#project-title {
+        h2.project-title {
           margin-bottom: 1.25rem;
         }
 
-        h5#project-long__description {
+        h5.project-long__description {
           color: $grey;
           margin-bottom: 1.875rem;
         }
 
-        h4#read-more {
-          max-width: max-container;
+        h4.read-more {
+          max-width: max-content;
           display: block;
           cursor: pointer;
         }

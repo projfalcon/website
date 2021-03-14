@@ -150,8 +150,8 @@ export default {
         transition: 0.3s ease all;
 
         &:not(.disabled):hover {
-          background: $pink-blue;
-          border-color: $pink-blue;
+          background: $primary;
+          border: none;
           color: #fff;
           cursor: pointer;
         }

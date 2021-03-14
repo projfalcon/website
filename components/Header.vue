@@ -5,17 +5,28 @@
 
       <div
         class="c-Header__container-info"
-        data-aos="fade-up"
       >
-        <h1 class="h1">
+        <h1
+          class="h1"
+          data-aos="fade-up"
+          data-aos-delay="250"
+        >
           High-<span class="highlighted">quality,</span> blazing-<span class="highlighted">fast.</span>
         </h1>
 
-        <h3 class="h3">
+        <h3
+          class="h3"
+          data-aos="fade-up"
+          data-aos-delay="250"
+        >
           Our team is ready to tackle the hardest of solutions for your company.
         </h3>
 
-        <div class="c-Header__container-info__actions">
+        <div
+          class="c-Header__container-info__actions"
+          data-aos="fade-up"
+          data-aos-delay="250"
+        >
           <button class="btn btn-primary btn-bold btn-rounded" @click="scrollToContacts">
             Get in touch
           </button>
@@ -33,6 +44,7 @@
       <div
         class="c-Header__container-animation"
         data-aos="fade-left"
+        data-aos-delay="250"
       >
         <img src="~assets/media/illustrations/header-people.svg">
       </div>
